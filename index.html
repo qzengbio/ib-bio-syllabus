@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IB Biology 2025 Syllabus Outline</title>
+    <link rel="stylesheet" href="./syllabus-browser.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-panel">
+        <div class="brand-line">
+          <a class="brand" href="./" aria-label="IB Biology syllabus outline home">
+            <span>IB</span>
+            <strong>Biology Syllabus Outline</strong>
+          </a>
+          <div class="reader-controls" aria-label="Reading controls">
+            <label>
+              <span>Font size</span>
+              <input id="fontSizeInput" type="range" min="15" max="22" value="17" />
+              <strong id="fontSizeValue">17px</strong>
+            </label>
+          </div>
+        </div>
+
+        <div class="search-row">
+          <label class="search-box">
+            <span>Search the syllabus</span>
+            <input id="searchInput" type="search" placeholder="Search understanding, guidance, code, topic..." />
+          </label>
+          <div class="scope-buttons" aria-label="Quick scopes">
+            <button class="scope-button active" data-quick-scope="all" type="button">All</button>
+            <button class="scope-button" data-quick-scope="theme:A" type="button">A</button>
+            <button class="scope-button" data-quick-scope="theme:B" type="button">B</button>
+            <button class="scope-button" data-quick-scope="theme:C" type="button">C</button>
+            <button class="scope-button" data-quick-scope="theme:D" type="button">D</button>
+            <button class="scope-button" data-quick-scope="teaching:SL/HL" type="button">SL</button>
+            <button class="scope-button" data-quick-scope="teaching:AHL" type="button">HL</button>
+          </div>
+        </div>
+
+      </header>
+
+      <main class="workspace">
+        <aside class="outline-panel" aria-label="Syllabus outline">
+          <div class="panel-heading">
+            <div>
+              <p>Outline</p>
+              <h1>Theme / Level / Topic</h1>
+            </div>
+            <div class="outline-actions">
+              <button id="expandAll" type="button">Expand</button>
+              <button id="collapseAll" type="button">Collapse</button>
+            </div>
+          </div>
+          <div id="outlineTree" class="outline-tree"></div>
+        </aside>
+
+        <section class="reader-panel" aria-label="Selected syllabus content">
+          <div class="reader-heading">
+            <div>
+              <p id="readerEyebrow">Reader</p>
+              <h2 id="readerTitle">Syllabus understandings</h2>
+            </div>
+            <div class="reader-stats">
+              <strong id="readerCount">0</strong>
+              <span>understandings</span>
+            </div>
+          </div>
+
+          <div id="readerContent" class="reader-content"></div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <span>retaer@gmail.com</span>
+        <span>Based on IB Biology guide, first assessment 2025</span>
+        <span>Updated May 2026</span>
+      </footer>
+    </div>
+
+    <script src="./syllabus-data.js"></script>
+    <script src="./syllabus-browser.js"></script>
+  </body>
+</html>
