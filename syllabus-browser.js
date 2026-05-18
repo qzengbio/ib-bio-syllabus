@@ -32,6 +32,42 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+const italicScientificTerms = [
+  "Aptenodytes forsteri",
+  "Bacillus",
+  "Cerastium arcticum",
+  "Dendroctonus micans",
+  "Dinornis novaezealandiae",
+  "Euglena",
+  "Gavia arctica",
+  "Homo floresiensis",
+  "Homo sapiens",
+  "Ips typographus",
+  "Mirabilis jalapa",
+  "Neomonachus tropicalis",
+  "Paranthropus robustus",
+  "Parus major",
+  "Persicaria",
+  "Pusa hispida",
+  "Rangifer tarandus",
+  "Staphylococcus",
+  "Strix aluco",
+  "Vibrio fischeri"
+].sort((a, b) => b.length - a.length);
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function formatOfficialText(value) {
+  let formatted = escapeHtml(value);
+  italicScientificTerms.forEach((term) => {
+    const pattern = new RegExp(`\\b${escapeRegExp(term)}\\b`, "g");
+    formatted = formatted.replace(pattern, `<i>${term}</i>`);
+  });
+  return formatted;
+}
+
 function getHours(topic) {
   const slHl = topic.official.teachingHours.slHl ?? 0;
   const ahl = topic.official.teachingHours.additionalHl ?? 0;
@@ -469,7 +505,7 @@ function textBlock(title, text) {
   return `
     <div class="supplement-block">
       <h4>${escapeHtml(title)}</h4>
-      <p>${escapeHtml(cleaned)}</p>
+      <p>${formatOfficialText(cleaned)}</p>
     </div>
   `;
 }
@@ -479,7 +515,7 @@ function questionBlock(title, questions) {
   return `
     <div class="question-block">
       <h4>${escapeHtml(title)}</h4>
-      ${questions.map((question) => `<span>${escapeHtml(question)}</span>`).join("")}
+      ${questions.map((question) => `<span>${formatOfficialText(question)}</span>`).join("")}
     </div>
   `;
 }
@@ -489,7 +525,7 @@ function listBlock(title, items) {
   return `
     <div class="detail-list">
       <h4>${escapeHtml(title)}</h4>
-      <ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      <ul>${items.map((item) => `<li>${formatOfficialText(item)}</li>`).join("")}</ul>
     </div>
   `;
 }
@@ -501,8 +537,8 @@ function renderUnderstandingCard(understanding) {
         <span>${escapeHtml(understanding.code)}</span>
         <strong>${escapeHtml(understanding.teachingLevel)}</strong>
       </header>
-      <h3>${escapeHtml(understanding.official.statement)}</h3>
-      ${understanding.official.guidance ? `<p>${escapeHtml(understanding.official.guidance)}</p>` : ""}
+      <h3>${formatOfficialText(understanding.official.statement)}</h3>
+      ${understanding.official.guidance ? `<p>${formatOfficialText(understanding.official.guidance)}</p>` : ""}
       ${textBlock("Application of skills", understanding.official.applicationOfSkills)}
       ${textBlock("Nature of science", understanding.official.natureOfScience)}
       ${textBlock("Note", understanding.official.note)}
