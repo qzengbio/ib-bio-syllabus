@@ -73,16 +73,11 @@ button {
   text-decoration: none;
 }
 
-.brand span {
-  display: grid;
-  place-items: center;
+.brand img {
+  display: block;
   width: 40px;
   height: 40px;
-  border: 1px solid #c7dbe3;
   border-radius: 10px;
-  background: var(--brand);
-  color: white;
-  font-weight: 900;
 }
 
 .brand strong {
