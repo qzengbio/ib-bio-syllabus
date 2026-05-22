@@ -1,0 +1,19 @@
+{
+  "name": "IB Biology Syllabus Outline",
+  "short_name": "IB Syllabus",
+  "icons": [
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#245f73",
+  "background_color": "#f7fafc",
+  "display": "standalone"
+}

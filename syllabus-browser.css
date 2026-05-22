@@ -583,6 +583,13 @@ button {
   line-height: 1.5;
 }
 
+mark {
+  border-radius: 4px;
+  background: #fff0a8;
+  color: inherit;
+  padding: 0 2px;
+}
+
 .supplement-block {
   margin-top: 12px;
   border-left: 3px solid var(--section-color, var(--brand));

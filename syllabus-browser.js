@@ -59,11 +59,27 @@ function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function highlightSearchTerm(value) {
+  const query = state.search.trim();
+  if (!query) return value;
+  const pattern = new RegExp(escapeRegExp(escapeHtml(query)), "gi");
+  return value.replace(pattern, (match) => `<mark>${match}</mark>`);
+}
+
 function formatOfficialText(value) {
-  let formatted = escapeHtml(value);
+  const markTokens = [];
+  let formatted = highlightSearchTerm(escapeHtml(value));
+  formatted = formatted.replace(/<mark>[\s\S]*?<\/mark>/g, (match) => {
+    const token = `@@MARK_${markTokens.length}@@`;
+    markTokens.push(match);
+    return token;
+  });
   italicScientificTerms.forEach((term) => {
     const pattern = new RegExp(`\\b${escapeRegExp(term)}\\b`, "g");
     formatted = formatted.replace(pattern, `<i>${term}</i>`);
+  });
+  markTokens.forEach((mark, index) => {
+    formatted = formatted.replace(`@@MARK_${index}@@`, mark);
   });
   return formatted;
 }
