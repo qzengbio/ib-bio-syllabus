@@ -5,24 +5,33 @@ const topics = syllabus.topics;
 const understandings = syllabus.understandings;
 
 const state = {
-  expanded: new Set(["theme:A", "level:A:1", "topic:A1.1"]),
+  expanded: new Set(),
   scopes: new Set(["all"]),
   search: "",
   fontSize: 17
 };
 
+const fontSizeBounds = {
+  min: 15,
+  max: 22
+};
+
 const els = {
-  fontSizeInput: document.querySelector("#fontSizeInput"),
+  fontSizeMinus: document.querySelector("#fontSizeMinus"),
+  fontSizePlus: document.querySelector("#fontSizePlus"),
   fontSizeValue: document.querySelector("#fontSizeValue"),
   searchInput: document.querySelector("#searchInput"),
+  levelScopeButtons: document.querySelector("#levelScopeButtons"),
   outlineTree: document.querySelector("#outlineTree"),
+  toggleOutline: document.querySelector("#toggleOutline"),
   expandAll: document.querySelector("#expandAll"),
   collapseAll: document.querySelector("#collapseAll"),
-  readerEyebrow: document.querySelector("#readerEyebrow"),
   readerTitle: document.querySelector("#readerTitle"),
   readerCount: document.querySelector("#readerCount"),
   readerContent: document.querySelector("#readerContent")
 };
+
+const mobileOutlineQuery = window.matchMedia("(max-width: 760px)");
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -242,6 +251,21 @@ function isTeachingScope(scope) {
   return scope.startsWith("teaching:");
 }
 
+function isThemeScope(scope) {
+  return scope.startsWith("theme:");
+}
+
+function isLevelScope(scope) {
+  return scope.startsWith("level:");
+}
+
+function getThemeFromScope(scope) {
+  if (isThemeScope(scope)) return scope.split(":")[1];
+  if (isLevelScope(scope)) return scope.split(":")[1];
+  if (scope.startsWith("topic:")) return syllabus.topicByCode[scope.slice("topic:".length)]?.theme;
+  return null;
+}
+
 function getActiveScopeGroups() {
   const scopes = [...state.scopes].filter((scope) => scope !== "all");
   return {
@@ -267,26 +291,6 @@ function getScopedUnderstandings() {
   return understandings.filter(
     (understanding) => matchesScopeGroup(content, understanding) && matchesScopeGroup(teaching, understanding)
   );
-}
-
-function getScopeLabel(scope) {
-  if (scope === "all") return "All syllabus";
-  if (scope === "teaching:SL/HL") return "SL";
-  if (scope === "teaching:AHL") return "HL";
-  if (scope.startsWith("theme:")) {
-    const theme = syllabus.themes[scope.split(":")[1]];
-    return `${theme.code} ${theme.name}`;
-  }
-  if (scope.startsWith("level:")) {
-    const [, themeCode, levelCode] = scope.split(":");
-    return `${themeCode}${levelCode} ${syllabus.levels[levelCode].name}`;
-  }
-  if (scope.startsWith("topic:")) {
-    const topic = syllabus.topicByCode[scope.slice("topic:".length)];
-    return `${topic.code} ${topic.title}`;
-  }
-  if (scope.startsWith("understanding:")) return scope.slice("understanding:".length);
-  return scope;
 }
 
 function isScopeChecked(scope) {
@@ -321,6 +325,47 @@ function toggleScope(scope) {
   }
 
   if (state.scopes.size === 0) state.scopes.add("all");
+  renderAll();
+}
+
+function toggleQuickScope(scope) {
+  state.search = "";
+  els.searchInput.value = "";
+
+  if (scope === "all") {
+    state.scopes = new Set(["all"]);
+    renderAll();
+    return;
+  }
+
+  if (isTeachingScope(scope)) {
+    toggleScope(scope);
+    return;
+  }
+
+  state.scopes.delete("all");
+  const themeCode = getThemeFromScope(scope);
+
+  if (isThemeScope(scope)) {
+    const sameThemeLevels = [...state.scopes].filter(
+      (activeScope) => isLevelScope(activeScope) && getThemeFromScope(activeScope) === themeCode
+    );
+    sameThemeLevels.forEach((activeScope) => state.scopes.delete(activeScope));
+  }
+
+  if (isLevelScope(scope)) {
+    state.scopes.delete(`theme:${themeCode}`);
+  }
+
+  if (state.scopes.has(scope)) {
+    state.scopes.delete(scope);
+  } else {
+    state.scopes.add(scope);
+    expandScope(scope);
+  }
+
+  if (state.scopes.size === 0) state.scopes.add("all");
+
   renderAll();
 }
 
@@ -378,7 +423,7 @@ function checkbox(scope) {
 
 function outlineRow({ id, scope, depth, label, meta, theme, hasChildren = true }) {
   return `
-    <div class="outline-row depth-${depth} theme-${escapeHtml(theme ?? "")}" data-label-scope="${escapeHtml(scope)}">
+    <div class="outline-row depth-${depth} theme-${escapeHtml(theme ?? "")}">
       ${nodeButton(id, hasChildren)}
       ${checkbox(scope)}
       <button class="outline-label" data-focus-scope="${escapeHtml(scope)}" type="button">
@@ -536,16 +581,6 @@ function questionBlock(title, questions) {
   `;
 }
 
-function listBlock(title, items) {
-  if (!items?.length) return "";
-  return `
-    <div class="detail-list">
-      <h4>${escapeHtml(title)}</h4>
-      <ul>${items.map((item) => `<li>${formatOfficialText(item)}</li>`).join("")}</ul>
-    </div>
-  `;
-}
-
 function renderUnderstandingCard(understanding) {
   return `
     <article class="understanding-card full" id="${escapeHtml(understanding.code)}">
@@ -558,7 +593,6 @@ function renderUnderstandingCard(understanding) {
       ${textBlock("Application of skills", understanding.official.applicationOfSkills)}
       ${textBlock("Nature of science", understanding.official.natureOfScience)}
       ${textBlock("Note", understanding.official.note)}
-      ${listBlock("Learning focus", understanding.learningFocus)}
       ${getDisplayTags(understanding).length ? `
         <div class="term-row">
           ${getDisplayTags(understanding).map((term) => `
@@ -575,10 +609,9 @@ function renderReader() {
   const groups = groupUnderstandings(items);
 
   els.readerCount.textContent = items.length;
-  els.readerEyebrow.textContent = state.search.trim() ? "Search results" : "Reader";
   els.readerTitle.textContent = state.search.trim()
     ? `Matches for "${state.search.trim()}"`
-    : "Syllabus understandings";
+    : "Selected syllabus";
 
   if (!items.length) {
     els.readerContent.innerHTML = `<p class="empty-state">No understandings match this search.</p>`;
@@ -609,16 +642,85 @@ function renderReader() {
 }
 
 function renderQuickScopes() {
-  document.querySelectorAll("[data-quick-scope]").forEach((button) => {
-    const scope = button.dataset.quickScope;
-    button.classList.toggle("active", state.search.trim() === "" && isScopeChecked(scope));
+  renderLevelScopeButtons();
+}
+
+function makeFilterButton({ scope, text, title, className = "" }) {
+  const button = document.createElement("button");
+  button.className = `scope-button compact${className ? ` ${className}` : ""}${
+    state.search.trim() === "" && isScopeChecked(scope) ? " active" : ""
+  }`;
+  button.type = "button";
+  button.dataset.quickScope = scope;
+  if (title) button.title = title;
+  button.textContent = text;
+  return button;
+}
+
+function renderLevelScopeButtons() {
+  els.levelScopeButtons.innerHTML = "";
+
+  themes.forEach((theme) => {
+    if (theme.code === "C") {
+      const breakPoint = document.createElement("span");
+      breakPoint.className = "filter-break";
+      breakPoint.setAttribute("aria-hidden", "true");
+      els.levelScopeButtons.append(breakPoint);
+    }
+
+    const group = document.createElement("div");
+    group.className = `level-scope-group theme-${theme.code}`;
+
+    const themeScope = `theme:${theme.code}`;
+    group.append(
+      makeFilterButton({
+        scope: themeScope,
+        text: theme.code,
+        title: `${theme.code} ${theme.name}`,
+        className: "theme-scope-button"
+      })
+    );
+
+    levels.forEach((level) => {
+      const scope = levelId(theme.code, level.code);
+      group.append(makeFilterButton({ scope, text: level.code, title: `${theme.code}${level.code} ${level.name}` }));
+    });
+
+    els.levelScopeButtons.append(group);
   });
+
+  els.levelScopeButtons.append(
+    makeFilterButton({ scope: "teaching:SL/HL", text: "SL", className: "global-scope-button" })
+  );
+  els.levelScopeButtons.append(
+    makeFilterButton({ scope: "teaching:AHL", text: "HL", className: "global-scope-button" })
+  );
+  els.levelScopeButtons.append(makeFilterButton({ scope: "all", text: "All", className: "global-scope-button" }));
 }
 
 function renderFontSize() {
   document.documentElement.style.setProperty("--reader-font-size", `${state.fontSize}px`);
-  els.fontSizeInput.value = state.fontSize;
   els.fontSizeValue.textContent = `${state.fontSize}px`;
+  els.fontSizeMinus.disabled = state.fontSize <= fontSizeBounds.min;
+  els.fontSizePlus.disabled = state.fontSize >= fontSizeBounds.max;
+}
+
+function changeFontSize(delta) {
+  state.fontSize = Math.min(fontSizeBounds.max, Math.max(fontSizeBounds.min, state.fontSize + delta));
+  renderFontSize();
+}
+
+function syncMobileOutlineState() {
+  const collapsed = mobileOutlineQuery.matches && !document.body.classList.contains("mobile-outline-open");
+  document.body.classList.toggle("mobile-outline-collapsed", collapsed);
+  els.toggleOutline.setAttribute("aria-expanded", String(!collapsed));
+  els.toggleOutline.textContent = collapsed ? "Show" : "Hide";
+}
+
+function closeMobileOutline() {
+  if (!mobileOutlineQuery.matches) return;
+  document.body.classList.remove("mobile-outline-open");
+  syncMobileOutlineState();
 }
 
 function renderAll() {
@@ -626,6 +728,7 @@ function renderAll() {
   renderReader();
   renderQuickScopes();
   renderFontSize();
+  syncMobileOutlineState();
 }
 
 document.body.addEventListener("click", (event) => {
@@ -640,18 +743,20 @@ document.body.addEventListener("click", (event) => {
   const scope = event.target.closest("[data-scope]");
   if (scope) {
     toggleScope(scope.dataset.scope);
+    closeMobileOutline();
     return;
   }
 
   const focus = event.target.closest("[data-focus-scope]");
   if (focus) {
     setSingleScope(focus.dataset.focusScope);
+    closeMobileOutline();
     return;
   }
 
   const quickScope = event.target.closest("[data-quick-scope]");
   if (quickScope) {
-    toggleScope(quickScope.dataset.quickScope);
+    toggleQuickScope(quickScope.dataset.quickScope);
     return;
   }
 
@@ -661,13 +766,23 @@ document.body.addEventListener("click", (event) => {
   }
 });
 
+els.toggleOutline.addEventListener("click", () => {
+  document.body.classList.toggle("mobile-outline-open");
+  syncMobileOutlineState();
+});
+
+mobileOutlineQuery.addEventListener("change", syncMobileOutlineState);
+
 els.searchInput.addEventListener("input", (event) => {
   setSearch(event.target.value);
 });
 
-els.fontSizeInput.addEventListener("input", (event) => {
-  state.fontSize = Number(event.target.value);
-  renderFontSize();
+els.fontSizeMinus.addEventListener("click", () => {
+  changeFontSize(-1);
+});
+
+els.fontSizePlus.addEventListener("click", () => {
+  changeFontSize(1);
 });
 
 els.expandAll.addEventListener("click", () => {

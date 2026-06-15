@@ -20,11 +20,10 @@
             <strong>IB Biology Syllabus Outline</strong>
           </a>
           <div class="reader-controls" aria-label="Reading controls">
-            <label>
-              <span>Font size</span>
-              <input id="fontSizeInput" type="range" min="15" max="22" value="17" />
-              <strong id="fontSizeValue">17px</strong>
-            </label>
+            <span>Font</span>
+            <button id="fontSizeMinus" type="button" aria-label="Decrease font size">−</button>
+            <strong id="fontSizeValue">17px</strong>
+            <button id="fontSizePlus" type="button" aria-label="Increase font size">+</button>
           </div>
         </div>
 
@@ -33,14 +32,8 @@
             <span>Search the syllabus</span>
             <input id="searchInput" type="search" placeholder="Search understanding, guidance, code, topic..." />
           </label>
-          <div class="scope-buttons" aria-label="Quick scopes">
-            <button class="scope-button active" data-quick-scope="all" type="button">All</button>
-            <button class="scope-button" data-quick-scope="theme:A" type="button">A</button>
-            <button class="scope-button" data-quick-scope="theme:B" type="button">B</button>
-            <button class="scope-button" data-quick-scope="theme:C" type="button">C</button>
-            <button class="scope-button" data-quick-scope="theme:D" type="button">D</button>
-            <button class="scope-button" data-quick-scope="teaching:SL/HL" type="button">SL</button>
-            <button class="scope-button" data-quick-scope="teaching:AHL" type="button">HL</button>
+          <div class="filter-panel" aria-label="Syllabus filters">
+            <div id="levelScopeButtons" class="scope-buttons level-scope-buttons" aria-label="Group scopes"></div>
           </div>
         </div>
 
@@ -54,6 +47,7 @@
               <h1>Theme / Level / Topic</h1>
             </div>
             <div class="outline-actions">
+              <button id="toggleOutline" class="mobile-outline-toggle" type="button" aria-expanded="false">Show</button>
               <button id="expandAll" type="button">Expand</button>
               <button id="collapseAll" type="button">Collapse</button>
             </div>
@@ -64,12 +58,10 @@
         <section class="reader-panel" aria-label="Selected syllabus content">
           <div class="reader-heading">
             <div>
-              <p id="readerEyebrow">Reader</p>
               <h2 id="readerTitle">Syllabus understandings</h2>
             </div>
             <div class="reader-stats">
               <strong id="readerCount">0</strong>
-              <span>understandings</span>
             </div>
           </div>
 
@@ -79,7 +71,7 @@
       <footer class="site-footer">
         <span>retaer@gmail.com</span>
         <span>Based on IB Biology guide, first assessment 2025</span>
-        <span>Updated May 2026</span>
+        <span>Updated June 2026</span>
       </footer>
     </div>
 
