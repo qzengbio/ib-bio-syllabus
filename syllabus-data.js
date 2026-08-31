@@ -1,4 +1,4 @@
-globalThis.BIOLOGY_2025_SYLLABUS = (() => {
+globalThis.BIOLOGY_2028_SYLLABUS = (() => {
   const themes = {
   "A": {
     "code": "A",
@@ -889,7 +889,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Hydrogen bonds as a consequence of the polar covalent bonds within water molecules",
-      "guidance": "Students should understand that polarity of covalent bonding within water molecules is due to unequal sharing of electrons and that hydrogen bonding due to this polarity occurs between water molecules. Students should be able to represent two or more water molecules and hydrogen bonds between them with the notation shown below to indicate polarity."
+      "guidance": "Students should understand that polarity of covalent bonding within water molecules is due to unequal sharing of electrons and that hydrogen bonding due to this polarity occurs between water molecules. Students should be able to represent two or more water molecules and hydrogen bonds between them with the notation shown below to indicate polarity. The following diagram is provided in the data booklet."
     },
     "learningFocus": [
       "Unequal electron sharing produces polarity in water molecules",
@@ -1169,7 +1169,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Components of a nucleotide",
-      "guidance": "In diagrams of nucleotides use circles, pentagons and rectangles to represent relative positions of phosphates, pentose sugars and bases."
+      "guidance": "In diagrams of nucleotides use circles, pentagons and rectangles to represent relative positions of phosphates, pentose sugars and bases. The following diagram is provided in the data booklet."
     },
     "learningFocus": [
       "Nucleotides contain phosphate, pentose sugar and nitrogenous base",
@@ -1235,7 +1235,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Bases in each nucleic acid that form the basis of a code",
-      "guidance": "Students should know the names of the nitrogenous bases."
+      "guidance": "Students should know the names of the nitrogenous bases. SL students are not required to know which bases are purines and pyrimidines."
     },
     "learningFocus": [
       "Nitrogenous bases are the basis of genetic coding",
@@ -1443,7 +1443,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Conservation of the genetic code across all life forms as evidence of universal common ancestry",
-      "guidance": "Students are not required to memorize any specific examples. Additional higher level"
+      "guidance": "Students are not required to memorize any specific examples."
     },
     "learningFocus": [
       "The genetic code is conserved across life forms",
@@ -1618,7 +1618,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Chargaff’s data on the relative amounts of pyrimidine and purine bases across diverse life forms",
-      "guidance": "",
       "natureOfScience": "Students should understand how the “problem of induction” is addressed by the “certainty of falsification”. In this case, Chargaff’s data falsified the tetranucleotide hypothesis that there was a repeating sequence of the four bases in DNA."
     },
     "learningFocus": [
@@ -1905,7 +1904,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Approaches used to estimate dates of the first living cells and the last universal common ancestor",
-      "guidance": "Students should develop an appreciation of the immense length of time over which life has been evolving on Earth."
+      "guidance": "Students should develop an appreciation of the immense length of time over which life has been evolving on Earth. Students should have a basic understanding of common approaches such as genomic analysis, fossils, and carbon dating."
     },
     "learningFocus": [
       "Scientists use approaches to estimate when the first living cells and LUCA existed",
@@ -1975,7 +1974,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Cells as the basic structural unit of all living organisms",
-      "guidance": "",
+      "guidance": "Students should understand that organisms composed of cells and that cells are the basic units of structure. Students are not required to know the historical development of this idea.",
       "natureOfScience": "Students should be aware that deductive reason can be used to generate predictions from theories. Based on cell theory, a newly discovered organism can be predicted to consist of one or more cells."
     },
     "learningFocus": [
@@ -2009,7 +2008,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Microscopy skills",
-      "guidance": "",
       "applicationOfSkills": "Students should have experience of making temporary mounts of cells and tissues, staining, measuring sizes using an eyepiece graticule, focusing with coarse and fine adjustments, calculating actual size and magnification, producing a scale bar and taking photographs.",
       "natureOfScience": "Students should appreciate that measurement using instruments is a form of quantitative observation."
     },
@@ -2050,7 +2048,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Developments in microscopy",
-      "guidance": "Include the advantages of electron microscopy, freeze fracture, cryogenic electron microscopy, and the use of fluorescent stains and immunofluorescence in light microscopy."
+      "guidance": "Students must know the basic principles and main advantages of electron microscopy, freeze fractures, cryogenic electron microscopy, and the use of fluorescent stains and immunofluorescence in light microscopy. Detailed procedural knowledge of microscopy techniques is not required."
     },
     "learningFocus": [
       "Students should know advantages of electron microscopy",
@@ -2237,7 +2235,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Differences in eukaryotic cell structure between animals, fungi and plants",
-      "guidance": "Include presence and composition of cell walls, differences in size and function of vacuoles, presence of chloroplasts and other plastids, and presence of centrioles, cilia and flagella."
+      "guidance": "Include presence and composition of cell walls, differences in size and function of vacuoles, presence of chloroplasts and other plastids, and presence of centrioles, cilia and flagella. Students should know general structural differences between plant, animal and fungal cells. Knowledge of detailed biochemical composition or extensive structural detail is not required."
     },
     "learningFocus": [
       "Animal, fungal and plant cells differ in cell wall presence and composition",
@@ -2311,7 +2309,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Cell types and cell structures viewed in light and electron micrographs",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to identify cells in light and electron micrographs as prokaryote, plant or animal. In electron micrographs, students should be able to identify these structures: nucleoid region, prokaryotic cell wall, nucleus, mitochondrion, chloroplast, sap vacuole, Golgi apparatus, rough and smooth endoplasmic reticulum, chromosomes, ribosomes, cell wall, plasma membrane and microvilli."
     },
     "learningFocus": [
@@ -2348,8 +2345,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Drawing and annotation based on electron micrographs",
-      "guidance": "",
-      "applicationOfSkills": "Students should be able to draw and annotate diagrams of organelles (nucleus, mitochondria, chloroplasts, sap vacuole, Golgi apparatus, rough and smooth endoplasmic reticulum and chromosomes) as well as other cell structures (cell wall, plasma membrane, secretory vesicles and microvilli) shown in electron micrographs. Students are required to include the functions in their annotations. Additional higher level"
+      "applicationOfSkills": "Students should be able to draw and annotate diagrams of organelles (nucleus, mitochondria, chloroplasts, sap vacuole, Golgi apparatus, rough and smooth endoplasmic reticulum and chromosomes) as well as other cell structures (cell wall, plasma membrane, secretory vesicles and microvilli) shown in electron micrographs. Students are required to include the functions in their annotations."
     },
     "learningFocus": [
       "Students should draw and annotate organelles and cell structures shown in electron micrographs",
@@ -2571,7 +2567,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Lytic cycle of a virus",
-      "guidance": "Students should appreciate that viruses rely on a host cell for energy supply, nutrition, protein synthesis and other life functions. Use bacteriophage lambda as an example of the phases in a lytic cycle."
+      "guidance": "Students should appreciate that viruses rely on a host cell for energy supply, nutrition, protein synthesis and other life functions. Use bacteriophage lambda as an example of the phases in a lytic cycle. The cycle diagram is provided in the data booklet."
     },
     "learningFocus": [
       "Viruses rely on host cells for energy, nutrition, protein synthesis and other life functions",
@@ -2606,7 +2602,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Lysogenic cycle of a virus",
-      "guidance": "Use bacteriophage lambda as an example."
+      "guidance": "Use bacteriophage lambda as an example. The cycle diagram is provided in the data booklet."
     },
     "learningFocus": [
       "Bacteriophage lambda is the required example for the lysogenic cycle",
@@ -2918,7 +2914,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Karyotyping and karyograms",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to classify chromosomes by banding patterns, length and centromere position. Students should evaluate the evidence for the hypothesis that chromosome 2 in humans arose from the fusion of chromosomes 12 and 13 with a shared primate ancestor.",
       "natureOfScience": "Students should be able to distinguish between testable hypotheses such as the origin of chromosome 2 and non-testable statements."
     },
@@ -3026,7 +3021,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Comparison of genome sizes",
-      "guidance": "",
       "applicationOfSkills": "Students should extract information about genome size for different taxonomic groups from a database to compare genome size to organism complexity."
     },
     "learningFocus": [
@@ -3062,7 +3056,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Current and potential future uses of whole genome sequencing",
-      "guidance": "Include the increasing speed and decreasing costs. For current uses, include research into evolutionary relationships and for potential future uses, include personalized medicine. Additional higher level"
+      "guidance": "Include the increasing speed and decreasing costs. For current uses, include research into evolutionary relationships and for potential future uses, include personalized medicine."
     },
     "learningFocus": [
       "Whole genome sequencing is becoming faster and cheaper",
@@ -3167,7 +3161,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Engagement with local plant or animal species to develop a dichotomous key",
-      "guidance": "",
       "applicationOfSkills": "Students should engage with local plant or animal species to develop a dichotomous key."
     },
     "learningFocus": [
@@ -3766,7 +3759,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Roles of reproductive isolation and differential selection in speciation",
-      "guidance": "Include geographical isolation as a means of achieving reproductive isolation. Use the separation of bonobos and common chimpanzees by the Congo River as a specific example of divergence due to differential selection. Additional higher level"
+      "guidance": "Include geographical isolation as a means of achieving reproductive isolation. Use the separation of bonobos and common chimpanzees by the Congo River as a specific example of divergence due to differential selection."
     },
     "learningFocus": [
       "Roles of reproductive isolation and differential selection in speciation"
@@ -3995,7 +3988,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Causes of anthropogenic species extinction",
-      "guidance": "This should be a study of the causes of the current sixth mass extinction, rather than of non-anthropogenic causes of previous mass extinctions. To give a range of causes, carry out three or more brief case studies of species extinction: North Island giant moas (Dinornis novaezealandiae) as an example of the loss of terrestrial megafauna, Caribbean monk seals (Neomonachus tropicalis) as an example of the loss of a marine species, and one other species that has gone extinct from an area that is familiar to students.",
+      "guidance": "This should be a study of the causes of the current sixth mass extinction, rather than of non-anthropogenic causes of previous mass extinctions. To give a range of causes, carry out three or more brief case studies of species extinction: North Island giant moas (Dinornis novaezealandiae) should be used as an example of the loss of terrestrial megafauna, Caribbean monk seals (Neomonachus tropicalis) should be used as an example of the loss of a marine species, and include one other species that has gone extinct from an area that is familiar to students.",
       "note": "When students are referring to organisms in an examination, either the common name or the scientific name is acceptable."
     },
     "learningFocus": [
@@ -4265,7 +4258,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Digestion of polymers into monomers by hydrolysis reactions",
-      "guidance": "Water molecules are split to provide the -H and -OH groups that are incorporated to produce monomers, hence the name of this type of reaction."
+      "guidance": "Digestion is the breakdown of large, insoluble biological polymers into small, soluble monomers that can be absorbed by an organism. This occurs through hydrolysis reactions, in which water molecules are split to provide the –H and –OH groups that are incorporated to produce monomers, hence the name of this type of reaction. Students are required to know only the definition of digestion and that polymers are broken into monomers by hydrolysis. Detailed knowledge of biochemical pathways, specific enzymes or organ-level processes is not required."
     },
     "learningFocus": [
       "Digestion of polymers into monomers by hydrolysis reactions"
@@ -4297,7 +4290,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Form and function of monosaccharides",
-      "guidance": "Students should be able to recognize pentoses and hexoses as monosaccharides from molecular diagrams showing them in the ring forms. Use glucose as an example of the link between the properties of a monosaccharide and how it is used, emphasizing solubility, transportability, chemical stability and the yield of energy from oxidation as properties."
+      "guidance": "Students should be able to recognize pentoses and hexoses as monosaccharides from molecular diagrams showing them in the ring forms. Use glucose as an example of the link between the properties of a monosaccharide and how it is used, emphasizing solubility, transportability, chemical stability and the yield of energy from oxidation as properties. Students are not required to draw the structures."
     },
     "learningFocus": [
       "Form and function of monosaccharides"
@@ -4331,7 +4324,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Polysaccharides as energy storage compounds",
-      "guidance": "Include the compact nature of starch in plants and glycogen in animals due to coiling and branching during polymerization, the relative insolubility of these compounds due to large molecular size and the relative ease of adding or removing alpha-glucose monomers by condensation and hydrolysis to build or mobilize energy stores."
+      "guidance": "Include the compact nature of starch in plants and glycogen in animals due to coiling and branching during polymerization, the relative insolubility of these compounds due to large molecular size and the relative ease of adding or removing alpha-glucose monomers by condensation and hydrolysis to build or mobilize energy stores. The structures are provided in the data booklet."
     },
     "learningFocus": [
       "Polysaccharides as energy storage compounds"
@@ -4366,7 +4359,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Structure of cellulose related to its function as a structural polysaccharide in plants",
-      "guidance": "Include the alternating orientation of beta-glucose monomers, giving straight chains that can be grouped in bundles and cross-linked with hydrogen bonds."
+      "guidance": "Include the alternating orientation of beta-glucose monomers, giving straight chains that can be grouped in bundles and cross-linked with hydrogen bonds. The structures are provided in the data booklet."
     },
     "learningFocus": [
       "Structure of cellulose related to its function as a structural polysaccharide in plants"
@@ -4496,7 +4489,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Difference between saturated, monounsaturated and polyunsaturated fatty acids",
-      "guidance": "Include the number of double carbon (C=C) bonds and how this affects melting point. Relate this to the prevalence of different types of fatty acids in oils and fats used for energy storage in plants and endotherms respectively."
+      "guidance": "Include the number of double carbon (C=C) bonds and how this affects melting point. Relate this to the prevalence of different types of fatty acids in oils and fats used for energy storage in plants and endotherms respectively. Examples of fatty acids are provided in the data booklet."
     },
     "learningFocus": [
       "Difference between saturated, monounsaturated and polyunsaturated fatty acids"
@@ -4628,7 +4621,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Generalized structure of an amino acid",
-      "guidance": "Students should be able to draw a diagram of a generalized amino acid showing the alpha carbon atom with amine group, carboxyl group, R-group and hydrogen attached."
+      "guidance": "Students should be able to recognize and interpret the generalized structure of an amino acid, including the alpha carbon atom with an amine group, a carboxyl group, an R-group and a hydrogen atom. The general structure of an amino acid is provided in the data booklet."
     },
     "learningFocus": [
       "Generalized structure of an amino acid"
@@ -4756,7 +4749,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Effect of pH and temperature on protein structure",
-      "guidance": "Include the term “denaturation”. Additional higher level"
+      "guidance": "Include the term “denaturation”."
     },
     "learningFocus": [
       "Effect of pH and temperature on protein structure"
@@ -5308,7 +5301,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Fluid mosaic model of membrane structure",
-      "guidance": "Students should be able to draw a two-dimensional representation of the model and include peripheral and integral proteins, glycoproteins, phospholipids and cholesterol. They should also be able to indicate hydrophobic and hydrophilic regions. Additional higher level"
+      "guidance": "Students should be able to draw a two-dimensional representation of the model and include peripheral and integral proteins, glycoproteins, phospholipids and cholesterol. They should also be able to indicate hydrophobic and hydrophilic regions."
     },
     "learningFocus": [
       "Fluid mosaic model of membrane structure"
@@ -5639,7 +5632,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Advantages of compartmentalization in the cytoplasm of cells",
-      "guidance": "Include concentration of metabolites and enzymes and the separation of incompatible biochemical processes. Include lysosomes and phagocytic vacuoles as examples. Additional higher level"
+      "guidance": "Include concentration of metabolites and enzymes and the separation of incompatible biochemical processes. Include lysosomes and phagocytic vacuoles as examples."
     },
     "learningFocus": [
       "Advantages of compartmentalization in the cytoplasm of cells"
@@ -6032,7 +6025,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "official": {
       "statement": "Surface area-to-volume ratios and constraints on cell size",
       "guidance": "Students should understand the mathematical ratio between volume and surface area and that exchange of materials across a cell surface depends on its area whereas the need for exchange depends on cell volume.",
-      "natureOfScience": "Students should recognize that models are simplified versions of complex systems. In this case, surface-area-to-volume relationship can be modelled using cubes of different side lengths. Although the cubes have a simpler shape than real organisms, scale factors operate in the same way. Additional higher level"
+      "natureOfScience": "Students should recognize that models are simplified versions of complex systems. In this case, surface-area-to-volume relationship can be modelled using cubes of different side lengths. Although the cubes have a simpler shape than real organisms, scale factors operate in the same way."
     },
     "learningFocus": [
       "Surface area-to-volume ratios and constraints on cell size"
@@ -6359,7 +6352,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Measurement of lung volumes",
-      "guidance": "",
       "applicationOfSkills": "Students should make measurements to determine tidal volume, vital capacity, and inspiratory and expiratory reserves."
     },
     "learningFocus": [
@@ -6490,9 +6482,8 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Stomatal density",
-      "guidance": "",
       "applicationOfSkills": "Students should use micrographs or perform leaf casts to determine stomatal density.",
-      "natureOfScience": "Reliability of quantitative data is increased by repeating measurements. In this case, repeated counts of the number of stomata visible in the field of view at high power illustrate the variability of biological material and the need for replicate trials. Additional higher level"
+      "natureOfScience": "Reliability of quantitative data is increased by repeating measurements. In this case, repeated counts of the number of stomata visible in the field of view at high power illustrate the variability of biological material and the need for replicate trials."
     },
     "learningFocus": [
       "Stomatal density"
@@ -6523,7 +6514,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Adaptations of foetal and adult haemoglobin for the transport of oxygen",
-      "guidance": "Include cooperative binding of oxygen to haem groups and allosteric binding of carbon dioxide."
+      "guidance": "Include cooperative binding of oxygen to haem groups and allosteric binding of carbon dioxide. Students are not required to know myoglobin."
     },
     "learningFocus": [
       "Adaptations of foetal and adult haemoglobin for the transport of oxygen"
@@ -6588,7 +6579,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Oxygen dissociation curves as a means of representing the affinity of haemoglobin for oxygen at different oxygen concentrations",
-      "guidance": "Explain the S-shaped form of the curve in terms of cooperative binding."
+      "guidance": "Explain the S-shaped form of the curve in terms of cooperative binding. Further biochemical details are given in B3.1.12. An affinity of haemoglobin for oxygen graph is provided in the data booklet."
     },
     "learningFocus": [
       "Oxygen dissociation curves as a means of representing the affinity of haemoglobin for oxygen at different oxygen concentrations"
@@ -6654,7 +6645,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Structure of arteries and veins",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to distinguish arteries and veins in micrographs from the structure of a vessel wall and its thickness relative to the diameter of the lumen."
     },
     "learningFocus": [
@@ -6718,7 +6708,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Measurement of pulse rates",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to determine heart rate by feeling the carotid or radial pulse with fingertips. Traditional methods could be compared with digital ones."
     },
     "learningFocus": [
@@ -6782,7 +6771,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Causes and consequences of occlusion of the coronary arteries",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to evaluate epidemiological data relating to the incidence of coronary heart disease.",
       "natureOfScience": "Students should understand that correlation coefficients quantify correlations between variables and allow the strength of the relationship to be assessed. Low correlation coefficients or lack of any correlation could provide evidence against a hypothesis, but even strong correlations such as that between saturated fat intake and coronary heart disease do not prove a causal link."
     },
@@ -6882,7 +6870,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Distribution of tissues in a transverse section of the stem of a dicotyledonous plant",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to draw plan diagrams from micrographs to identify the relative positions of vascular bundles, xylem, phloem, cortex and epidermis. Students should annotate the diagram with the main functions of these structures."
     },
     "learningFocus": [
@@ -6915,8 +6902,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Distribution of tissues in a transverse section of the root of a dicotyledonous plant",
-      "guidance": "",
-      "applicationOfSkills": "Students should be able to draw diagrams from micrographs to identify vascular bundles, xylem and phloem, cortex and epidermis. Additional higher level"
+      "applicationOfSkills": "Students should be able to draw diagrams from micrographs to identify vascular bundles, xylem and phloem, cortex and epidermis."
     },
     "learningFocus": [
       "Distribution of tissues in a transverse section of the root of a dicotyledonous plant"
@@ -7114,7 +7100,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Stages in the cardiac cycle",
-      "guidance": "",
       "applicationOfSkills": "Students should understand the sequence of events in the left side of the heart that follow the initiation of the heartbeat by the sinoatrial node (the “pacemaker”). Students should be able to interpret systolic and diastolic blood pressure measurements from data and graphs."
     },
     "learningFocus": [
@@ -7181,7 +7166,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Adaptations of phloem sieve tubes and companion cells for translocation of sap",
-      "guidance": "Include sieve plates, reduced cytoplasm and organelles, no nucleus for sieve tube elements and presence of many mitochondria for companion cells and plasmodesmata between them. Students should appreciate how these adaptations ease the flow of sap and enhance loading of carbon compounds into phloem sieve tubes at sources and unloading of them at sinks."
+      "guidance": "Include sieve plates, reduced cytoplasm and organelles, no nucleus for sieve tube elements and presence of many mitochondria for companion cells and plasmodesmata between them. Students should appreciate how these adaptations ease the flow of sap and enhance loading of carbon compounds into phloem sieve tubes at sources and unloading of them at sinks. Students do not need to know further complex pathways such as symplastic and apoplastic pathways."
     },
     "learningFocus": [
       "Adaptations of phloem sieve tubes and companion cells for translocation of sap"
@@ -7246,7 +7231,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Sliding filament model of muscle contraction",
-      "guidance": "Students should understand how a sarcomere contracts by the sliding of actin and myosin filaments."
+      "guidance": "Students should understand how a sarcomere contracts by the sliding of actin and myosin filaments. The diagram is provided in the data booklet."
     },
     "learningFocus": [
       "Sliding filament model of muscle contraction"
@@ -7408,7 +7393,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Range of motion of a joint",
-      "guidance": "",
       "applicationOfSkills": "Students should compare the range of motion of a joint in a number of dimensions. Students should measure joint angles using computer analysis of images or a goniometer."
     },
     "learningFocus": [
@@ -7570,7 +7554,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Adaptations of organisms to the abiotic environment of their habitat",
-      "guidance": "Include a grass species adapted to sand dunes and a tree species adapted to mangrove swamps."
+      "guidance": "Use examples of a grass species adapted to sand dunes and a tree species adapted to mangrove swamps."
     },
     "learningFocus": [
       "Adaptations of organisms to the abiotic environment of their habitat"
@@ -7636,7 +7620,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Range of tolerance of a limiting factor",
-      "guidance": "",
       "applicationOfSkills": "Students should use transect data to correlate the distribution of plant or animal species with an abiotic variable. Students should collect this data themselves from a natural or semi- natural habitat. Semi-natural habitats have been influenced by humans but are dominated by wild rather than cultivated species. Sensors could be used to measure abiotic variables such as temperature, light intensity and soil pH."
     },
     "learningFocus": [
@@ -7771,7 +7754,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Adaptations to life in hot deserts and tropical rainforest",
-      "guidance": "Include examples of adaptations in named species of plants and animals."
+      "guidance": "Use examples of adaptations in named species of plants and animals."
     },
     "learningFocus": [
       "Adaptations to life in hot deserts and tropical rainforest"
@@ -7999,7 +7982,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Diversity of nutrition in archaea",
-      "guidance": "Students should understand that archaea are one of the three domains of life and appreciate that they are metabolically very diverse. Archaea species use either light, oxidation of inorganic chemicals or oxidation of carbon compounds to provide energy for ATP production. Students are not required to name examples."
+      "guidance": "Students should understand that archaea are one of the three domains of life and appreciate that they are very varied in how they obtain energy for ATP production. Students are not required to name examples. Detailed knowledge of biochemical mechanisms of obtaining energy is not required."
     },
     "learningFocus": [
       "Diversity of nutrition in archaea"
@@ -8032,7 +8015,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Relationship between dentition and the diet of omnivorous and herbivorous representative members of the family Hominidae",
-      "guidance": "",
       "applicationOfSkills": "Students should examine models or digital collections of skulls to infer diet from the anatomical features. Examples may include Homo sapiens (humans), Homo floresiensis and Paranthropus robustus.",
       "natureOfScience": "Deductions can be made from theories. In this example, observation of living mammals led to theories relating dentition to herbivorous or carnivorous diets. These theories allowed the diet of extinct organisms to be deduced."
     },
@@ -8133,7 +8115,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Adaptations of plant form for harvesting light",
-      "guidance": "Include examples from forest ecosystems to illustrate how plants in forests use different strategies to reach light sources, including trees that reach the canopy, lianas, epiphytes growing on branches of trees, strangler epiphytes, shade-tolerant shrubs and herbs growing on the forest floor."
+      "guidance": "Use examples from forest ecosystems to illustrate how plants in forests use different strategies to reach light sources, including trees that reach the canopy, lianas, epiphytes growing on branches of trees, strangler epiphytes, shade-tolerant shrubs and herbs growing on the forest floor."
     },
     "learningFocus": [
       "Adaptations of plant form for harvesting light"
@@ -8488,7 +8470,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Measurements in enzyme-catalysed reactions",
-      "guidance": "",
       "applicationOfSkills": "Students should determine reaction rates through experimentation and using secondary data."
     },
     "learningFocus": [
@@ -8520,8 +8501,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Effect of enzymes on activation energy",
-      "guidance": "",
-      "applicationOfSkills": "Students should appreciate that energy is required to break bonds within the substrate and that there is an energy yield when bonds are made to form the products of an enzyme- catalysed reaction. Students should be able to interpret graphs showing this effect. Additional higher level"
+      "applicationOfSkills": "Students should appreciate that energy is required to break bonds within the substrate and that there is an energy yield when bonds are made to form the products of an enzyme- catalysed reaction. Students should be able to interpret graphs showing this effect."
     },
     "learningFocus": [
       "Effect of enzymes on activation energy"
@@ -8552,7 +8532,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Intracellular and extracellular enzyme-catalysed reactions",
-      "guidance": "Include glycolysis and the Krebs cycle as intracellular examples and chemical digestion in the gut as an extracellular example."
+      "guidance": "Include glycolysis and the Krebs cycle as intracellular examples and chemical digestion in the gut as an extracellular example. For further guidance, refer to B4.2.4, B4.2.6, C1.1.3 and B1.1.3 as these statements are linked to each other."
     },
     "learningFocus": [
       "Intracellular and extracellular enzyme-catalysed reactions"
@@ -8938,8 +8918,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Variables affecting the rate of cell respiration",
-      "guidance": "",
-      "applicationOfSkills": "Students should make measurements allowing for the determination of the rate of cell respiration. Students should also be able to calculate the rate of cellular respiration from raw data that they have generated experimentally or from secondary data. Additional higher level"
+      "applicationOfSkills": "Students should make measurements allowing for the determination of the rate of cell respiration. Students should also be able to calculate the rate of cellular respiration from raw data that they have generated experimentally or from secondary data."
     },
     "learningFocus": [
       "Variables affecting the rate of cell respiration"
@@ -8970,7 +8949,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Role of NAD as a carrier of hydrogen and oxidation by removal of hydrogen during cell respiration",
-      "guidance": "Students should understand that oxidation is a process of electron loss, so when hydrogen with an electron is removed from a substrate (dehydrogenation) the substrate has been oxidized. They should appreciate that redox reactions involve both oxidation and reduction, and that NAD is reduced when it accepts hydrogen."
+      "guidance": "Students should understand that oxidation is a process of electron loss, so when hydrogen with an electron is removed from a substrate (dehydrogenation) the substrate has been oxidized. They should appreciate that redox reactions involve both oxidation and reduction, and that NAD is reduced when it accepts hydrogen. FAD is not required."
     },
     "learningFocus": [
       "Role of NAD as a carrier of hydrogen and oxidation by removal of hydrogen during cell respiration"
@@ -9135,7 +9114,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Oxidation and decarboxylation of acetyl groups in the Krebs cycle with a yield of ATP and reduced NAD",
-      "guidance": "Students are required to name only the intermediates citrate (6C) and oxaloacetate (4C). Students should appreciate that citrate is produced by transfer of an acetyl group to oxaloacetate and that oxaloacetate is regenerated by the reactions of the Krebs cycle, including four oxidations and two decarboxylations. They should also appreciate that the oxidations are dehydrogenation reactions."
+      "guidance": "Students are required to name only the intermediates citrate (6C) and oxaloacetate (4C). Students should appreciate that citrate is produced by transfer of an acetyl group to oxaloacetate and that oxaloacetate is regenerated by the reactions of the Krebs cycle, including four oxidations and two decarboxylations. They should also appreciate that the oxidations are dehydrogenation reactions. FAD is not required."
     },
     "learningFocus": [
       "Oxidation and decarboxylation of acetyl groups in the Krebs cycle with a yield of ATP and reduced NAD"
@@ -9168,7 +9147,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Transfer of energy by reduced NAD to the electron transport chain in the mitochondrion",
-      "guidance": "Energy is transferred when a pair of electrons is passed to the first carrier in the chain, converting reduced NAD back to NAD. Students should understand that reduced NAD comes from glycolysis, the link reaction and the Krebs cycle."
+      "guidance": "Energy is transferred when a pair of electrons is passed to the first carrier in the chain, converting reduced NAD back to NAD. Students should understand that reduced NAD comes from glycolysis, the link reaction and the Krebs cycle. FAD is not required."
     },
     "learningFocus": [
       "Transfer of energy by reduced NAD to the electron transport chain in the mitochondrion"
@@ -9427,7 +9406,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Separation and identification of photosynthetic pigments by chromatography",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to calculate Rf values from the results of chromatographic separation of photosynthetic pigments and identify them by colour and by values. Thin-layer chromatography or paper chromatography can be used."
     },
     "learningFocus": [
@@ -9459,7 +9437,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Absorption of specific wavelengths of light by photosynthetic pigments",
-      "guidance": "Include excitation of electrons within a pigment molecule, transformation of light energy to chemical energy and the reason that only some wavelengths are absorbed. Students should be familiar with absorption spectra. Include both wavelengths and colours of light in the horizontal axis of absorption spectra."
+      "guidance": "Include excitation of electrons within a pigment molecule, transformation of light energy to chemical energy and the reason that only some wavelengths are absorbed. Students should be familiar with absorption spectra. Include both wavelengths and colours of light in the horizontal axis of absorption spectra. Details of the electromagnetic spectrum and visible spectrum are provided in the data booklet."
     },
     "learningFocus": [
       "Absorption of specific wavelengths of light by photosynthetic pigments"
@@ -9491,7 +9469,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Similarities and differences of absorption and action spectra",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to determine rates of photosynthesis from data for oxygen production and carbon dioxide consumption for varying wavelengths. They should also be able to plot this data to make an action spectrum."
     },
     "learningFocus": [
@@ -9523,7 +9500,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Techniques for varying concentrations of carbon dioxide, light intensity or temperature experimentally to investigate the effects of limiting factors on the rate of photosynthesis",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to suggest hypotheses for the effects of these limiting factors and to test these through experimentation.",
       "natureOfScience": "Hypotheses are provisional explanations that require repeated testing. During scientific research, hypotheses can either be based on theories and then tested in an experiment or be based on evidence from an experiment already carried out. Students can decide in this case whether to suggest hypotheses for the effects of limiting factors on photosynthesis before or after performing their experiments. Students should be able to identify the dependent and independent variable in an experiment."
     },
@@ -9556,8 +9532,8 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Carbon dioxide enrichment experiments as a means of predicting future rates of photosynthesis and plant growth",
-      "guidance": "Include enclosed greenhouse experiments and free-air carbon dioxide enrichment experiments (FACE).",
-      "natureOfScience": "Finding methods for careful control of variables is part of experimental design. This may be easier in the laboratory but some experiments can only be done in the field. Field experiments include those performed in natural ecosystems. Students should be able to identify a controlled variable in an experiment. Additional higher level"
+      "guidance": "Students should have an understanding of the basic experimental set-up for CO2 enrichment and recognize major limitations without using detailed methodological critiques. Include enclosed greenhouse experiments and free-air carbon dioxide enrichment experiments (FACE).",
+      "natureOfScience": "Finding methods for careful control of variables is part of experimental design. This may be easier in the laboratory but some experiments can only be done in the field. Field experiments include those performed in natural ecosystems. Students should be able to identify a controlled variable in an experiment."
     },
     "learningFocus": [
       "Carbon dioxide enrichment experiments as a means of predicting future rates of photosynthesis and plant growth"
@@ -9981,7 +9957,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Cell signalling by bacteria in quorum sensing",
-      "guidance": "Include the example of bioluminescence in the marine bacterium Vibrio fischeri."
+      "guidance": "Use the example of bioluminescence in the marine bacterium Vibrio fischeri."
     },
     "learningFocus": [
       "Cell signalling by bacteria in quorum sensing"
@@ -10400,7 +10376,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Neurons as cells within the nervous system that carry electrical impulses",
-      "guidance": "Students should understand that cytoplasm and a nucleus form the cell body of a neuron, with elongated nerve fibres of varying length projecting from it. An axon is a long single fibre. Dendrites are multiple shorter fibres. Electrical impulses are conducted along these fibres."
+      "guidance": "Students should understand that cytoplasm and a nucleus form the cell body of a neuron, with elongated nerve fibres of varying length projecting from it. An axon is a long single fibre. Dendrites are multiple shorter fibres. Electrical impulses are conducted along these fibres. An example of a neuron is provided in the data booklet."
     },
     "learningFocus": [
       "Neurons as cells within the nervous system that carry electrical impulses"
@@ -10591,7 +10567,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Generation of an excitatory postsynaptic potential",
-      "guidance": "Include diffusion of neurotransmitters across the synaptic cleft and binding to transmembrane receptors. Use acetylcholine as an example. Students should appreciate that this neurotransmitter exists in many types of synapse including neuromuscular junctions. Additional higher level"
+      "guidance": "Include diffusion of neurotransmitters across the synaptic cleft and binding to transmembrane receptors. Use acetylcholine as an example. Students should appreciate that this neurotransmitter exists in many types of synapse including neuromuscular junctions."
     },
     "learningFocus": [
       "Generation of an excitatory postsynaptic potential"
@@ -10686,7 +10662,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Oscilloscope traces showing resting potentials and action potentials",
-      "guidance": "",
       "applicationOfSkills": "Students should interpret the oscilloscope trace in relation to cellular events. The number of impulses per second can be measured."
     },
     "learningFocus": [
@@ -11320,7 +11295,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Feedback control of heart rate following sensory input from baroreceptors and chemoreceptors",
-      "guidance": "Include the location of baroreceptors and chemoreceptors. Baroreceptors monitor blood pressure. Chemoreceptors monitor blood pH and concentrations of oxygen and carbon dioxide. Students should understand the role of the medulla in coordinating responses and sending nerve impulses to the heart to change the heart’s stroke volume and heart rate."
+      "guidance": "Include the location of baroreceptors and chemoreceptors. Baroreceptors monitor blood pressure. Chemoreceptors monitor blood pH and concentrations of oxygen and carbon dioxide. Students should understand the role of the brainstem (medulla) in coordinating responses and sending nerve impulses to the heart to change the heart’s stroke volume and heart rate."
     },
     "learningFocus": [
       "Feedback control of heart rate following sensory input from baroreceptors and chemoreceptors"
@@ -11387,7 +11362,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Control of peristalsis in the digestive system by the central nervous system and enteric nervous system",
-      "guidance": "Limit to initiation of swallowing of food and egestion of faeces being under voluntary control by the central nervous system (CNS) but peristalsis between these points in the digestive system being under involuntary control by the enteric nervous system (ENS). The action of the ENS ensures passage of material through the gut is coordinated. Additional higher level"
+      "guidance": "Limit to initiation of swallowing of food and egestion of faeces being under voluntary control by the central nervous system (CNS) but peristalsis between these points in the digestive system being under involuntary control by the enteric nervous system (ENS). The action of the ENS ensures passage of material through the gut is coordinated. A simple peristaltic movement figure is provided in the data booklet."
     },
     "learningFocus": [
       "Control of peristalsis in the digestive system by the central nervous system and enteric nervous system"
@@ -11420,7 +11395,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Observations of tropic responses in seedlings",
-      "guidance": "",
       "applicationOfSkills": "Students should gather qualitative data, using diagrams to record their observations of seedlings illustrating tropic responses. They could also collect quantitative data by measuring the angle of curvature of seedlings.",
       "natureOfScience": "Students should be able to distinguish between qualitative and quantitative observations and understand factors that limit the precision of measurements and their accuracy. Strategies for increasing the precision, accuracy and reliability of measurements in tropism experiments could be considered."
     },
@@ -11876,7 +11850,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Activation of B-lymphocytes by helper T-lymphocytes",
-      "guidance": "Students should understand that there are antigen-specific B-cells and helper T-cells. B-cells produce antibodies and become memory cells only when they have been activated. Activation requires both direct interaction with the specific antigen and contact with a helper T-cell that has also become activated by the same type of antigen."
+      "guidance": "Students should understand that there are antigen-specific B-cells and helper T-cells. B-cells produce antibodies and become memory cells only when they have been activated. Activation requires both direct interaction with the specific antigen and contact with a helper T-cell that has also become activated by the same type of antigen. Students are not required to know detailed mechanisms of T-cell activation beyond this guidance."
     },
     "learningFocus": [
       "Activation of B-lymphocytes by helper T-lymphocytes"
@@ -12199,7 +12173,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Evaluation of data related to the COVID-19 pandemic",
-      "guidance": "",
       "applicationOfSkills": "Students should have the opportunity to calculate both percentage difference and percentage change."
     },
     "learningFocus": [
@@ -12328,7 +12301,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Capture–mark–release–recapture and the Lincoln index to estimate population size for motile organisms",
-      "guidance": "",
       "applicationOfSkills": "Students should use the Lincoln index to estimate population size. N Population size estimate = M × , where M is the number of individuals caught and marked initially, N is R the total number of individuals recaptured and R is the number of marked individuals recaptured. Students should understand the assumptions made when using this method."
     },
     "learningFocus": [
@@ -12425,8 +12397,8 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "official": {
       "statement": "Population growth curves",
       "guidance": "Students should study at least one case study in an ecosystem. Students should understand reasons for exponential growth in the initial phases. A lag phase is not expected as a part of sigmoid population growth.",
-      "applicationOfSkills": "Students should test the growth of a population against the model of exponential growth using a graph with a logarithmic scale for size of population on the vertical axis and a non- logarithmic scale for time on the horizontal axis.",
-      "natureOfScience": "The curve represents an idealized graphical model. Students should recognize that models are often simplifications of complex systems."
+      "natureOfScience": "The curve represents an idealized graphical model. Students should recognize that models are often simplifications of complex systems.",
+      "applicationOfSkills": "Students should test the growth of a population against the model of exponential growth using a graph with a logarithmic scale for size of population on the vertical axis and a non- logarithmic scale for time on the horizontal axis."
     },
     "learningFocus": [
       "Population growth curves"
@@ -12457,7 +12429,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Modelling of the sigmoid population growth curve",
-      "guidance": "",
       "applicationOfSkills": "Students should collect data regarding population growth. Yeast and duckweed are recommended but other organisms that proliferate under experimental conditions could be used."
     },
     "learningFocus": [
@@ -12585,7 +12556,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Mutualism as an interspecific relationship that benefits both species",
-      "guidance": "Include these examples: root nodules in Fabaceae (legume family), mycorrhizae in Orchidaceae (orchid family) and zooxanthellae in hard corals. In each case include the benefits to both organisms.",
+      "guidance": "Use these examples: root nodules in Fabaceae (legume family), mycorrhizae in Orchidaceae (orchid family) and zooxanthellae in hard corals. In each case include the benefits to both organisms.",
       "note": "When students are referring to organisms in an examination, either the common name or the scientific name is acceptable."
     },
     "learningFocus": [
@@ -12683,7 +12654,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Use of the chi-squared test for association between two species",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to apply chi-squared tests on the presence/absence of two species in several sampling sites, exploring the differences or similarities in distribution. This may provide evidence for interspecific competition."
     },
     "learningFocus": [
@@ -13001,7 +12971,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Use of light as the external energy source in photoautotrophs and oxidation reactions as the energy source in chemoautotrophs",
-      "guidance": "Students should understand that oxidation reactions release energy, so they are useful in living organisms. Include iron-oxidizing bacteria as an example of a chemoautotroph."
+      "guidance": "Students should understand that oxidation reactions release energy, so they are useful in living organisms. Use iron-oxidizing bacteria as an example of a chemoautotroph. Students only need a basic understanding of energy acquisition by chemoautotrophs, using iron-oxidizing bacteria as an illustrative example without knowing detailed biochemical pathways."
     },
     "learningFocus": [
       "Use of light as the external energy source in photoautotrophs and oxidation reactions as the energy source in chemoautotrophs"
@@ -13130,7 +13100,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Construction of energy pyramids",
-      "guidance": "",
       "applicationOfSkills": "Students should use research data from specific ecosystems to represent energy transfer and energy losses between trophic levels in food chains."
     },
     "learningFocus": [
@@ -13584,7 +13553,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Role of helicase and DNA polymerase in DNA replication",
-      "guidance": "Limit to the role of helicase in unwinding and breaking hydrogen bonds between DNA strands and the general role of DNA polymerase."
+      "guidance": "Limit to the role of helicase in unwinding and breaking hydrogen bonds between DNA strands and the general role of DNA polymerase. SL students need to know the general function of polymerase."
     },
     "learningFocus": [
       "Role of helicase and DNA polymerase in DNA replication"
@@ -13616,7 +13585,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Polymerase chain reaction and gel electrophoresis as tools for amplifying and separating DNA",
-      "guidance": "Students should understand the use of primers, temperature changes and Taq polymerase in the polymerase chain reaction (PCR) and the basis of separation of DNA fragments in gel electrophoresis."
+      "guidance": "Students should understand the use of primers, temperature changes and Taq polymerase in the polymerase chain reaction (PCR) and the basis of separation of DNA fragments in gel electrophoresis. Students should understand what primers do and why they are used."
     },
     "learningFocus": [
       "Polymerase chain reaction and gel electrophoresis as tools for amplifying and separating DNA"
@@ -13650,7 +13619,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "official": {
       "statement": "Applications of polymerase chain reaction and gel electrophoresis",
       "guidance": "Students should appreciate the broad range of applications, including DNA profiling for paternity and forensic investigations.",
-      "natureOfScience": "Reliability is enhanced by increasing the number of measurements in an experiment or test. In DNA profiling, increasing the number of markers used reduces the probability of a false match. Additional higher level"
+      "natureOfScience": "Reliability is enhanced by increasing the number of measurements in an experiment or test. In DNA profiling, increasing the number of markers used reduces the probability of a false match."
     },
     "learningFocus": [
       "Applications of polymerase chain reaction and gel electrophoresis"
@@ -14056,7 +14025,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Using the genetic code expressed as a table of mRNA codons",
-      "guidance": "Students should be able to deduce the sequence of amino acids coded by an mRNA strand."
+      "guidance": "Students should be able to deduce the sequence of amino acids coded by an mRNA strand. Messenger RNA codons and their corresponding amino acids are provided in the data booklet."
     },
     "learningFocus": [
       "Using the genetic code expressed as a table of mRNA codons"
@@ -14119,7 +14088,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Mutations that change protein structure",
-      "guidance": "Include an example of a point mutation affecting protein structure. Additional higher level"
+      "guidance": "Include an example of a point mutation affecting protein structure."
     },
     "learningFocus": [
       "Mutations that change protein structure"
@@ -14594,7 +14563,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "official": {
       "statement": "Mutation as a source of genetic variation",
       "guidance": "Students should appreciate that gene mutation is the original source of all genetic variation. Although most mutations are either harmful or neutral for an individual organism, in a species they are in the long term essential for evolution by natural selection.",
-      "natureOfScience": "Commercial genetic tests can yield information about potential future health and disease risk. One possible impact is that, without expert interpretation, this information could be problematic. Additional higher level"
+      "natureOfScience": "Commercial genetic tests can yield information about potential future health and disease risk. One possible impact is that, without expert interpretation, this information could be problematic."
     },
     "learningFocus": [
       "Mutation as a source of genetic variation"
@@ -14949,7 +14918,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Identification of phases of mitosis",
-      "guidance": "",
       "applicationOfSkills": "Students should do this using diagrams as well as with cells viewed with a microscope or in a micrograph."
     },
     "learningFocus": [
@@ -14982,7 +14950,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Meiosis as a reduction division",
-      "guidance": "Students should understand the terms “diploid” and “haploid” and how the two divisions of meiosis produce four haploid nuclei from one diploid nucleus. They should also understand the need for meiosis in a sexual life cycle. Students should be able to outline the two rounds of segregation in meiosis."
+      "guidance": "Students should understand the terms “diploid” and “haploid” and how the two divisions of meiosis produce four haploid nuclei from one diploid nucleus. They should also understand the need for meiosis in a sexual life cycle. Students should know the names of the phases and be able to outline the two rounds of segregation in meiosis."
     },
     "learningFocus": [
       "Meiosis as a reduction division"
@@ -15045,7 +15013,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Meiosis as a source of variation",
-      "guidance": "Students should understand how meiosis generates genetic diversity by random orientation of bivalents and by crossing over. Additional higher level"
+      "guidance": "Students should understand how meiosis generates genetic diversity by random orientation of bivalents and by crossing over."
     },
     "learningFocus": [
       "Meiosis as a source of variation"
@@ -15592,7 +15560,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "External factors impacting the pattern of gene expression",
-      "guidance": "Limit to one example of a hormone and one example of a biochemical such as lactose or tryptophan in bacteria."
+      "guidance": "Limit to one example of a hormone and one example of a biochemical such as lactose or tryptophan in bacteria. Students do not need to know the names or mechanisms of lac operon and/or trp operon."
     },
     "learningFocus": [
       "External factors impacting the pattern of gene expression"
@@ -15722,7 +15690,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Changes due to water movement in plant tissue bathed in hypotonic and those bathed in hypertonic solutions",
-      "guidance": "",
       "applicationOfSkills": "Students should be able to measure changes in tissue length and mass, and analyse data to deduce isotonic solute concentration. Students should also be able to use standard deviation and standard error to help in the analysis of data. Students are not required to memorize formulae for calculating these statistics. Standard deviation and standard error could be determined for the results of this experiment if there are repeats for each concentration. This would allow the reliability of length and mass measurements to be compared. Standard error could be shown graphically as error bars."
     },
     "learningFocus": [
@@ -15820,7 +15787,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Medical applications of isotonic solutions",
-      "guidance": "Include intravenous fluids given as part of medical treatment and bathing of organs ready for transplantation as examples. Additional higher level"
+      "guidance": "Include intravenous fluids given as part of medical treatment and bathing of organs ready for transplantation as examples."
     },
     "learningFocus": [
       "Medical applications of isotonic solutions"
@@ -16331,7 +16298,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Dispersal and germination of seeds",
-      "guidance": "Distinguish seed dispersal from pollination. Include the growth and development of the embryo and the mobilization of food reserves. Additional higher level"
+      "guidance": "Distinguish seed dispersal from pollination. Include the growth and development of the embryo and the mobilization of food reserves."
     },
     "learningFocus": [
       "Dispersal and germination of seeds"
@@ -16588,7 +16555,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Hormone replacement therapy and the risk of coronary heart disease",
-      "guidance": "",
       "natureOfScience": "In early epidemiological studies, it was argued that women undergoing hormone replacement therapy (HRT) had reduced incidence of coronary heart disease (CHD) and this was deemed to be a cause- and-effect relationship. Later randomized controlled trials showed that use of HRT led to a small increase in the risk of CHD. The correlation between HRT and decreased incidence of CHD is not actually a cause- and-effect relationship. HRT patients have a higher socioeconomic status, and this status has a causal relationship with lower risk of CHD."
     },
     "learningFocus": [
@@ -16907,7 +16873,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Incomplete dominance and codominance",
-      "guidance": "Students should understand the differences between these patterns of inheritance at the phenotypic level. In codominance, heterozygotes have a dual phenotype. Include the AB blood type (IAIB) as an example. In incomplete dominance, heterozygotes have an intermediate phenotype. Include four o'clock flower or marvel of Peru (Mirabilis jalapa) as an example.",
+      "guidance": "Students should understand the differences between these patterns of inheritance at the phenotypic level. In codominance, heterozygotes have a dual phenotype. Include the AB blood type (IAIB) as an example. In incomplete dominance, heterozygotes have an intermediate phenotype. Use four o'clock flower or marvel of Peru (Mirabilis jalapa) as an example.",
       "note": "When students are referring to organisms in an examination, either the common name or the scientific name is acceptable."
     },
     "learningFocus": [
@@ -17004,7 +16970,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Pedigree charts to deduce patterns of inheritance of genetic disorders",
-      "guidance": "Students should understand the genetic basis for the prohibition of marriage between close relatives in many societies.",
+      "guidance": "Students should understand the genetic basis for the prohibition of marriage between close relatives in many societies. Pedigree symbols are provided in the data booklet.",
       "natureOfScience": "Scientists draw general conclusions by inductive reasoning when they base a theory on observations of some but not all cases. A pattern of inheritance may be deduced from parts of a pedigree chart and this theory may then allow genotypes of specific individuals in the pedigree to be deduced. Students should be able to distinguish between inductive and deductive reasoning."
     },
     "learningFocus": [
@@ -17068,8 +17034,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Box-and-whisker plots to represent data for a continuous variable such as student height",
-      "guidance": "",
-      "applicationOfSkills": "Students should use a box-and-whisker plot to display six aspects of data: outliers, minimum, first quartile, median, third quartile and maximum. A data point is categorized as an outlier if it is more than 1.5 × IQR (interquartile range) above the third quartile or below the first quartile. Additional higher level"
+      "applicationOfSkills": "Students should use a box-and-whisker plot to display six aspects of data: outliers, minimum, first quartile, median, third quartile and maximum. A data point is categorized as an outlier if it is more than 1.5 × IQR (interquartile range) above the third quartile or below the first quartile. A box-and- whisker plot for normal distributions is provided in the data booklet."
     },
     "learningFocus": [
       "Box-and-whisker plots to represent data for a continuous variable such as student height"
@@ -17165,7 +17130,6 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Loci of human genes and their polypeptide products",
-      "guidance": "",
       "applicationOfSkills": "Students should explore genes and their polypeptide products in databases. They should find pairs of genes with loci on different chromosomes and also in close proximity on the same chromosome."
     },
     "learningFocus": [
@@ -17454,7 +17418,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Thermoregulation mechanisms in humans",
-      "guidance": "Students should appreciate that birds and mammals regulate their body temperature by physiological and behavioural means. Students are only required to understand the details of thermoregulation for humans. Include vasodilation, vasoconstriction, shivering, sweating, uncoupled respiration in brown adipose tissue and hair erection. Additional higher level"
+      "guidance": "Students should appreciate that birds and mammals regulate their body temperature by physiological and behavioural means. Students are only required to understand the details of thermoregulation for humans. Include vasodilation, vasoconstriction, shivering, sweating, uncoupled respiration in brown adipose tissue and hair erection."
     },
     "learningFocus": [
       "Thermoregulation mechanisms in humans"
@@ -17519,7 +17483,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Role of the glomerulus, Bowman’s capsule and proximal convoluted tubule in excretion",
-      "guidance": "Students should appreciate how ultrafiltration remove solutes from blood plasma and how useful substances are then reabsorbed, to leave toxins and other unwanted solutes in the filtrate, which are excreted in urine."
+      "guidance": "Students should understand how ultrafiltration remove solutes from blood plasma and how useful substances are then reabsorbed, to leave toxins and other unwanted solutes in the filtrate, which are excreted in urine."
     },
     "learningFocus": [
       "Role of the glomerulus, Bowman’s capsule and proximal convoluted tubule in excretion"
@@ -17876,8 +17840,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Modelling of sexual and natural selection based on experimental control of selection pressures",
-      "guidance": "",
-      "applicationOfSkills": "Students should interpret data from John Endler’s experiments with guppies. Additional higher level"
+      "applicationOfSkills": "Students should interpret data from John Endler’s experiments with guppies."
     },
     "learningFocus": [
       "Modelling of sexual and natural selection based on experimental control of selection pressures"
@@ -17938,8 +17901,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Allele frequencies of geographically isolated populations",
-      "guidance": "",
-      "applicationOfSkills": "Students should use databases to search allele frequencies. Use at least one human example."
+      "applicationOfSkills": "Students should use databases to search allele frequencies. Use at least one human example. Students are not required to know any specific allele frequencies of the example."
     },
     "learningFocus": [
       "Allele frequencies of geographically isolated populations"
@@ -18288,7 +18250,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Assessing sustainability of resource harvesting from natural ecosystems",
-      "guidance": "Sustainability depends on the rate of harvesting being lower than the rate of replacement. Include one terrestrial plant species and one species of marine fish as examples of renewable resources and how sustainability of harvesting can be assessed."
+      "guidance": "Sustainability depends on the rate of harvesting being lower than the rate of replacement. Use one terrestrial plant species and one species of marine fish as examples of renewable resources and how sustainability of harvesting can be assessed."
     },
     "learningFocus": [
       "Assessing sustainability of resource harvesting from natural ecosystems"
@@ -18451,7 +18413,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Restoration of natural processes in ecosystems by rewilding",
-      "guidance": "Methods should include reintroduction of apex predators and other keystone species, re-establishment of connectivity of habitats over large areas, and minimization of human impact including by ecological management. Include the example of Hinewai Reserve in New Zealand. Additional higher level"
+      "guidance": "Methods should include reintroduction of apex predators and other keystone species, re-establishment of connectivity of habitats over large areas, and minimization of human impact including by ecological management. Include the example of Hinewai Reserve in New Zealand."
     },
     "learningFocus": [
       "Restoration of natural processes in ecosystems by rewilding"
@@ -18609,8 +18571,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Anthropogenic causes of climate change",
-      "guidance": "Limit to anthropogenic increases in atmospheric concentrations of carbon dioxide and methane.",
-      "natureOfScience": "Students should be able to distinguish between positive and negative correlation and should also distinguish between correlation and causation. For example, data from Antarctic ice cores shows a positive correlation between global temperatures and atmospheric carbon dioxide concentrations over hundreds of thousands of years. This correlation does not prove that carbon dioxide in the atmosphere increases global temperatures, although other evidence confirms the causal link."
+      "guidance": "Limit to anthropogenic increases in atmospheric concentrations of carbon dioxide and methane."
     },
     "learningFocus": [
       "Anthropogenic causes of climate change"
@@ -18772,7 +18733,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Poleward and upslope range shifts of temperate species",
-      "guidance": "As evidence-based examples, include upslope range shifts for tropical-zone montane bird species in New Guinea and range contraction and northward spread in North American tree species."
+      "guidance": "As evidence-based examples, use upslope range shifts for tropical-zone montane bird species in New Guinea and range contraction and northward spread in North American tree species."
     },
     "learningFocus": [
       "Poleward and upslope range shifts of temperate species"
@@ -18836,8 +18797,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "SL/HL",
     "official": {
       "statement": "Afforestation, forest regeneration and restoration of peat-forming wetlands as approaches to carbon sequestration",
-      "guidance": "",
-      "natureOfScience": "There is active scientific debate over whether plantations of non-native tree species or rewilding with native species offer the best approach to carbon sequestration. Peat formation naturally occurs in waterlogged soils in temperate and boreal zones and also very rapidly in some tropical ecosystems. Additional higher level"
+      "guidance": "There is active scientific debate over whether plantations of non-native tree species or rewilding with native species offer the best approach to carbon sequestration. Peat formation naturally occurs in waterlogged soils in temperate and boreal zones and also very rapidly in some tropical ecosystems."
     },
     "learningFocus": [
       "Afforestation, forest regeneration and restoration of peat-forming wetlands as approaches to carbon sequestration"
@@ -18901,7 +18861,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Disruption to the synchrony of phenological events by climate change",
-      "guidance": "Students should recognize that within an ecosystem temperature may act as the cue in one population and photoperiod may be the cue in another. Include spring growth of the Arctic mouse-ear chickweed (Cerastium arcticum) and arrival of migrating reindeer (Rangifer tarandus) as one example. Also include a suitable local example or use the breeding of the great tit (Parus major) and peak biomass of caterpillars in north European forests as another.",
+      "guidance": "Students should recognize that within an ecosystem temperature may act as the cue in one population and photoperiod may be the cue in another. Include spring growth of the Arctic mouse-ear chickweed (Cerastium arcticum) and arrival of migrating reindeer (Rangifer tarandus) as one example. A suitable local example can be included.",
       "note": "When students are referring to organisms in an examination, either the common name or the scientific name is acceptable."
     },
     "learningFocus": [
@@ -18967,7 +18927,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     "teachingLevel": "AHL",
     "official": {
       "statement": "Evolution as a consequence of climate change",
-      "guidance": "Include changes in the fitness of colour variants of the tawny owl (Strix aluco) as a consequence of changes in snow cover.",
+      "guidance": "Use changes in the fitness of colour variants of the tawny owl (Strix aluco) as a consequence of changes in snow cover.",
       "note": "When students are referring to organisms in an examination, either the common name or the scientific name is acceptable."
     },
     "learningFocus": [
@@ -19018,7 +18978,7 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
   }));
 
   return {
-    source: "IB Biology guide, first assessment 2025",
+    source: "IB Biology guide, first assessment 2028",
     themes,
     levels,
     understandings: understandings,
@@ -19027,3 +18987,5 @@ globalThis.BIOLOGY_2025_SYLLABUS = (() => {
     topicByCode: Object.fromEntries(normalizedTopics.map((topic) => [topic.code, topic]))
   };
 })();
+
+globalThis.BIOLOGY_2025_SYLLABUS = globalThis.BIOLOGY_2028_SYLLABUS;

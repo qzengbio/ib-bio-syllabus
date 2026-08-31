@@ -1,4 +1,4 @@
-const syllabus = globalThis.BIOLOGY_2025_SYLLABUS;
+const syllabus = globalThis.BIOLOGY_2028_SYLLABUS ?? globalThis.BIOLOGY_2025_SYLLABUS;
 const themes = Object.values(syllabus.themes);
 const levels = Object.values(syllabus.levels);
 const topics = syllabus.topics;
