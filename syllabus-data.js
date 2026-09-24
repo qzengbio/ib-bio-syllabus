@@ -891,6 +891,12 @@ globalThis.BIOLOGY_2028_SYLLABUS = (() => {
       "statement": "Hydrogen bonds as a consequence of the polar covalent bonds within water molecules",
       "guidance": "Students should understand that polarity of covalent bonding within water molecules is due to unequal sharing of electrons and that hydrogen bonding due to this polarity occurs between water molecules. Students should be able to represent two or more water molecules and hydrogen bonds between them with the notation shown below to indicate polarity. The following diagram is provided in the data booklet."
     },
+    "figures": [
+      {
+        "src": "assets/figures/A1.1.2-water-polarity.svg",
+        "alt": "Water molecule with a partial negative charge on oxygen and partial positive charges on both hydrogen atoms"
+      }
+    ],
     "learningFocus": [
       "Unequal electron sharing produces polarity in water molecules",
       "Polarity allows hydrogen bonding between water molecules",
@@ -1171,6 +1177,12 @@ globalThis.BIOLOGY_2028_SYLLABUS = (() => {
       "statement": "Components of a nucleotide",
       "guidance": "In diagrams of nucleotides use circles, pentagons and rectangles to represent relative positions of phosphates, pentose sugars and bases. The following diagram is provided in the data booklet."
     },
+    "figures": [
+      {
+        "src": "assets/figures/A1.2.2-nucleotide-components.svg",
+        "alt": "Simplified nucleotide diagram with a circle for phosphate, a pentagon for pentose sugar and a rectangle for a nitrogenous base"
+      }
+    ],
     "learningFocus": [
       "Nucleotides contain phosphate, pentose sugar and nitrogenous base",
       "Students should interpret and draw simplified nucleotide diagrams"
@@ -1204,6 +1216,12 @@ globalThis.BIOLOGY_2028_SYLLABUS = (() => {
       "statement": "Sugar–phosphate bonding and the sugar–phosphate “backbone” of DNA and RNA",
       "guidance": "Sugar–phosphate bonding makes a continuous chain of covalently bonded atoms in each strand of DNA or RNA nucleotides, which forms a strong “backbone” in the molecule."
     },
+    "figures": [
+      {
+        "src": "assets/figures/A1.2.3-sugar-phosphate-bonding.svg",
+        "alt": "Two simplified nucleotides connected by sugar-phosphate bonding to form part of a continuous backbone"
+      }
+    ],
     "learningFocus": [
       "Sugar-phosphate bonding links nucleotides into strands",
       "The sugar-phosphate backbone is a strong continuous covalent structure in DNA and RNA"
@@ -1304,6 +1322,13 @@ globalThis.BIOLOGY_2028_SYLLABUS = (() => {
       "statement": "DNA as a double helix made of two antiparallel strands of nucleotides with two strands linked by hydrogen bonding between complementary base pairs",
       "guidance": "In diagrams of DNA structure, students should draw the two strands antiparallel, but are not required to draw the helical shape. Students should show adenine (A) paired with thymine (T), and guanine (G) paired with cytosine (C). Students are not required to memorize the relative lengths of the purine and pyrimidine bases, or the numbers of hydrogen bonds."
     },
+    "figures": [
+      {
+        "src": "assets/figures/A1.2.6-antiparallel-dna-strands.svg",
+        "alt": "Two antiparallel DNA strands with cytosine paired to guanine and thymine paired to adenine by hydrogen bonds",
+        "layout": "wide"
+      }
+    ],
     "learningFocus": [
       "DNA consists of two antiparallel nucleotide strands",
       "Complementary bases pair through hydrogen bonding",

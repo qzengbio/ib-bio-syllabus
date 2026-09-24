@@ -32,8 +32,10 @@
             <span>Search the syllabus</span>
             <input id="searchInput" type="search" placeholder="Search understanding, guidance, code, topic..." />
           </label>
-          <div class="filter-panel" aria-label="Syllabus filters">
-            <div id="levelScopeButtons" class="scope-buttons level-scope-buttons" aria-label="Group scopes"></div>
+          <div id="teachingFilters" class="teaching-filters" aria-label="Teaching level filters">
+            <button data-toggle-scope="teaching:SL/HL" type="button">SL</button>
+            <button data-toggle-scope="teaching:AHL" type="button">HL</button>
+            <button data-toggle-scope="all" type="button">All</button>
           </div>
         </div>
 
@@ -44,12 +46,9 @@
           <div class="panel-heading">
             <div>
               <p>Outline</p>
-              <h1>Theme / Level / Topic</h1>
             </div>
             <div class="outline-actions">
               <button id="toggleOutline" class="mobile-outline-toggle" type="button" aria-expanded="false">Show</button>
-              <button id="expandAll" type="button">Expand</button>
-              <button id="collapseAll" type="button">Collapse</button>
             </div>
           </div>
           <div id="outlineTree" class="outline-tree"></div>
@@ -71,7 +70,7 @@
       <footer class="site-footer">
         <span>zengqiongyu@shsid.org</span>
         <span>Based on IB Biology guide, first assessment 2028</span>
-        <span>Updated August 2026</span>
+        <span>Updated September 2026</span>
       </footer>
     </div>
 

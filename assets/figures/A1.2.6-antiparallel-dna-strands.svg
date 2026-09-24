@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">Antiparallel DNA strands with complementary base pairs</title>
+  <desc id="desc">Two antiparallel sugar-phosphate strands joined by cytosine-guanine and thymine-adenine base pairs.</desc>
+
+  <rect width="800" height="400" fill="#ffffff"/>
+
+  <g fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round">
+    <path d="M92 52 L140 100"/>
+    <path d="M160 160 L92 199"/>
+    <path d="M92 221 L140 270"/>
+    <path d="M240 100 L270 100"/>
+    <path d="M240 270 L270 270"/>
+
+    <path d="M550 100 L580 100"/>
+    <path d="M660 160 L708 199"/>
+    <path d="M708 221 L660 270"/>
+    <path d="M660 330 L708 359"/>
+    <path d="M550 270 L580 270"/>
+  </g>
+
+  <g fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5">
+    <path d="M380 88 L440 88"/>
+    <path d="M380 100 L440 100"/>
+    <path d="M380 112 L440 112"/>
+    <path d="M380 264 L440 264"/>
+    <path d="M380 276 L440 276"/>
+  </g>
+
+  <g fill="#ffffff" stroke="#111827" stroke-width="2" stroke-linejoin="round">
+    <circle cx="80" cy="40" r="17"/>
+    <path d="M140 100 L190 60 L240 100 L220 160 L160 160 Z"/>
+    <rect x="270" y="77" width="110" height="46"/>
+
+    <circle cx="80" cy="210" r="17"/>
+    <path d="M140 270 L190 230 L240 270 L220 330 L160 330 Z"/>
+    <rect x="270" y="247" width="110" height="46"/>
+
+    <rect x="440" y="77" width="110" height="46"/>
+    <path d="M580 100 L630 60 L680 100 L660 160 L600 160 Z"/>
+    <circle cx="720" cy="210" r="17"/>
+
+    <rect x="440" y="247" width="110" height="46"/>
+    <path d="M580 270 L630 230 L680 270 L660 330 L600 330 Z"/>
+    <circle cx="720" cy="370" r="17"/>
+  </g>
+
+  <g fill="#111827" font-family="Georgia, 'Times New Roman', serif" font-size="23" text-anchor="middle">
+    <text x="325" y="108">Cytosine</text>
+    <text x="495" y="108">Guanine</text>
+    <text x="325" y="278">Thymine</text>
+    <text x="495" y="278">Adenine</text>
+  </g>
+</svg>

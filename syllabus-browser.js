@@ -5,7 +5,6 @@ const topics = syllabus.topics;
 const understandings = syllabus.understandings;
 
 const state = {
-  expanded: new Set(),
   scopes: new Set(["all"]),
   search: "",
   fontSize: 17
@@ -21,11 +20,9 @@ const els = {
   fontSizePlus: document.querySelector("#fontSizePlus"),
   fontSizeValue: document.querySelector("#fontSizeValue"),
   searchInput: document.querySelector("#searchInput"),
-  levelScopeButtons: document.querySelector("#levelScopeButtons"),
+  teachingFilters: document.querySelector("#teachingFilters"),
   outlineTree: document.querySelector("#outlineTree"),
   toggleOutline: document.querySelector("#toggleOutline"),
-  expandAll: document.querySelector("#expandAll"),
-  collapseAll: document.querySelector("#collapseAll"),
   readerTitle: document.querySelector("#readerTitle"),
   readerCount: document.querySelector("#readerCount"),
   readerContent: document.querySelector("#readerContent")
@@ -99,12 +96,6 @@ function getHours(topic) {
   return { slHl, ahl, total: slHl + ahl };
 }
 
-function getTeachingLevel(topic) {
-  if (topic.isHLOnly) return "HL only";
-  if ((topic.official.teachingHours.additionalHl ?? 0) > 0) return "SL + AHL";
-  return "SL/HL core";
-}
-
 function getUnderstanding(code) {
   return syllabus.understandingByCode[code];
 }
@@ -113,16 +104,20 @@ function getTopicForUnderstanding(understanding) {
   return syllabus.topicByCode[understanding.topicCode];
 }
 
-function levelId(themeCode, levelCode) {
-  return `level:${themeCode}:${levelCode}`;
-}
-
 function topicId(topicCode) {
   return `topic:${topicCode}`;
 }
 
-function understandingId(code) {
-  return `understanding:${code}`;
+function levelId(themeCode, levelCode) {
+  return `level:${themeCode}:${levelCode}`;
+}
+
+function themeId(themeCode) {
+  return `theme:${themeCode}`;
+}
+
+function organizationLevelId(levelCode) {
+  return `organization:${levelCode}`;
 }
 
 function getLevelTopics(themeCode, levelCode) {
@@ -140,6 +135,7 @@ function getUnderstandingSearchText(understanding) {
     understanding.official.applicationOfSkills,
     understanding.official.natureOfScience,
     understanding.official.note,
+    understanding.figures?.map((figure) => `${figure.alt || ""} ${figure.caption || ""}`).join(" "),
     understanding.learningFocus?.join(" "),
     understanding.searchTerms?.join(" "),
     understanding.skillCodes?.join(" "),
@@ -239,10 +235,10 @@ function scopeContainsUnderstanding(scope, understanding) {
   const topic = getTopicForUnderstanding(understanding);
   if (!topic) return false;
   if (scope === "all") return true;
-  if (scope === `theme:${topic.theme}`) return true;
-  if (scope === levelId(topic.theme, topic.organizationLevel)) return true;
   if (scope === topicId(topic.code)) return true;
-  if (scope === understandingId(understanding.code)) return true;
+  if (scope === levelId(topic.theme, topic.organizationLevel)) return true;
+  if (scope === themeId(topic.theme)) return true;
+  if (scope === organizationLevelId(topic.organizationLevel)) return true;
   if (scope === `teaching:${understanding.teachingLevel}`) return true;
   return false;
 }
@@ -251,19 +247,20 @@ function isTeachingScope(scope) {
   return scope.startsWith("teaching:");
 }
 
-function isThemeScope(scope) {
-  return scope.startsWith("theme:");
-}
-
 function isLevelScope(scope) {
   return scope.startsWith("level:");
 }
 
-function getThemeFromScope(scope) {
-  if (isThemeScope(scope)) return scope.split(":")[1];
-  if (isLevelScope(scope)) return scope.split(":")[1];
-  if (scope.startsWith("topic:")) return syllabus.topicByCode[scope.slice("topic:".length)]?.theme;
-  return null;
+function isTopicScope(scope) {
+  return scope.startsWith("topic:");
+}
+
+function isThemeScope(scope) {
+  return scope.startsWith("theme:");
+}
+
+function isOrganizationLevelScope(scope) {
+  return scope.startsWith("organization:");
 }
 
 function getActiveScopeGroups() {
@@ -298,14 +295,6 @@ function isScopeChecked(scope) {
   return state.scopes.has(scope);
 }
 
-function setSingleScope(scope) {
-  state.search = "";
-  els.searchInput.value = "";
-  state.scopes = new Set([scope]);
-  expandScope(scope);
-  renderAll();
-}
-
 function toggleScope(scope) {
   state.search = "";
   els.searchInput.value = "";
@@ -317,55 +306,50 @@ function toggleScope(scope) {
   }
 
   state.scopes.delete("all");
-  if (state.scopes.has(scope)) {
-    state.scopes.delete(scope);
-  } else {
-    state.scopes.add(scope);
-    expandScope(scope);
-  }
-
-  if (state.scopes.size === 0) state.scopes.add("all");
-  renderAll();
-}
-
-function toggleQuickScope(scope) {
-  state.search = "";
-  els.searchInput.value = "";
-
-  if (scope === "all") {
-    state.scopes = new Set(["all"]);
-    renderAll();
-    return;
-  }
-
-  if (isTeachingScope(scope)) {
-    toggleScope(scope);
-    return;
-  }
-
-  state.scopes.delete("all");
-  const themeCode = getThemeFromScope(scope);
 
   if (isThemeScope(scope)) {
-    const sameThemeLevels = [...state.scopes].filter(
-      (activeScope) => isLevelScope(activeScope) && getThemeFromScope(activeScope) === themeCode
-    );
-    sameThemeLevels.forEach((activeScope) => state.scopes.delete(activeScope));
+    const themeCode = scope.slice("theme:".length);
+    topics
+      .filter((topic) => topic.theme === themeCode)
+      .forEach((topic) => {
+        state.scopes.delete(levelId(topic.theme, topic.organizationLevel));
+        state.scopes.delete(topicId(topic.code));
+      });
+  }
+
+  if (isOrganizationLevelScope(scope)) {
+    const levelCode = scope.slice("organization:".length);
+    topics
+      .filter((topic) => topic.organizationLevel === levelCode)
+      .forEach((topic) => {
+        state.scopes.delete(levelId(topic.theme, topic.organizationLevel));
+        state.scopes.delete(topicId(topic.code));
+      });
   }
 
   if (isLevelScope(scope)) {
-    state.scopes.delete(`theme:${themeCode}`);
+    const [, themeCode, levelCode] = scope.split(":");
+    state.scopes.delete(themeId(themeCode));
+    state.scopes.delete(organizationLevelId(levelCode));
+    getLevelTopics(themeCode, levelCode).forEach((topic) => state.scopes.delete(topicId(topic.code)));
+  }
+
+  if (isTopicScope(scope)) {
+    const topic = syllabus.topicByCode[scope.slice("topic:".length)];
+    if (topic) {
+      state.scopes.delete(themeId(topic.theme));
+      state.scopes.delete(organizationLevelId(topic.organizationLevel));
+      state.scopes.delete(levelId(topic.theme, topic.organizationLevel));
+    }
   }
 
   if (state.scopes.has(scope)) {
     state.scopes.delete(scope);
   } else {
     state.scopes.add(scope);
-    expandScope(scope);
   }
 
   if (state.scopes.size === 0) state.scopes.add("all");
-
   renderAll();
 }
 
@@ -375,171 +359,45 @@ function setSearch(query) {
   renderAll();
 }
 
-function expandScope(scope) {
-  if (scope.startsWith("theme:")) {
-    state.expanded.add(scope);
-  }
-  if (scope.startsWith("level:")) {
-    const [, themeCode] = scope.split(":");
-    state.expanded.add(`theme:${themeCode}`);
-    state.expanded.add(scope);
-  }
-  if (scope.startsWith("topic:")) {
-    const topic = syllabus.topicByCode[scope.slice("topic:".length)];
-    state.expanded.add(`theme:${topic.theme}`);
-    state.expanded.add(levelId(topic.theme, topic.organizationLevel));
-    state.expanded.add(scope);
-  }
-  if (scope.startsWith("understanding:")) {
-    const understanding = getUnderstanding(scope.slice("understanding:".length));
-    const topic = getTopicForUnderstanding(understanding);
-    state.expanded.add(`theme:${topic.theme}`);
-    state.expanded.add(levelId(topic.theme, topic.organizationLevel));
-    state.expanded.add(topicId(topic.code));
-  }
-}
-
-function autoExpandSearchResults() {
-  if (!state.search.trim()) return;
-  understandings.filter(matchesSearch).forEach((understanding) => {
-    const topic = getTopicForUnderstanding(understanding);
-    state.expanded.add(`theme:${topic.theme}`);
-    state.expanded.add(levelId(topic.theme, topic.organizationLevel));
-    state.expanded.add(topicId(topic.code));
-  });
-}
-
-function nodeButton(id, hasChildren = true) {
-  const expanded = state.expanded.has(id);
-  const disabled = hasChildren ? "" : " disabled";
-  return `<button class="twisty${expanded ? " open" : ""}" data-toggle="${escapeHtml(id)}" type="button"${disabled} aria-label="Toggle"></button>`;
-}
-
-function checkbox(scope) {
-  return `
-    <button class="scope-check${isScopeChecked(scope) ? " checked" : ""}" data-scope="${escapeHtml(scope)}" type="button" aria-label="Toggle scope"></button>
-  `;
-}
-
-function outlineRow({ id, scope, depth, label, meta, theme, hasChildren = true }) {
-  return `
-    <div class="outline-row depth-${depth} theme-${escapeHtml(theme ?? "")}">
-      ${nodeButton(id, hasChildren)}
-      ${checkbox(scope)}
-      <button class="outline-label" data-focus-scope="${escapeHtml(scope)}" type="button">
-        <strong>${escapeHtml(label)}</strong>
-        ${meta ? `<span>${escapeHtml(meta)}</span>` : ""}
-      </button>
-    </div>
-  `;
-}
-
-function renderTopic(topic) {
-  const id = topicId(topic.code);
-  const open = state.expanded.has(id);
-  const understandingItems = topic.understandingCodes
-    .map(getUnderstanding)
-    .filter(Boolean)
-    .filter((understanding) => !state.search.trim() || matchesSearch(understanding));
-
-  if (state.search.trim() && understandingItems.length === 0 && !matchesTopicSearch(topic)) return "";
-
-  const { slHl, ahl } = getHours(topic);
-  const hours = ahl ? `${slHl}+${ahl} hr` : `${slHl} hr`;
-
-  return `
-    ${outlineRow({
-      id,
-      scope: id,
-      depth: 2,
-      theme: topic.theme,
-      label: `${topic.code} ${topic.title}`,
-      meta: `${getTeachingLevel(topic)} · ${hours} · ${topic.understandingCodes.length} U`
-    })}
-    ${open ? understandingItems.map((understanding) => renderUnderstandingRow(understanding, topic)).join("") : ""}
-  `;
-}
-
-function matchesTopicSearch(topic) {
-  const query = state.search.trim().toLowerCase();
-  if (!query) return true;
-  return [
-    topic.code,
-    topic.title,
-    topic.themeName,
-    topic.organizationLevelName,
-    topic.official.guidingQuestions.join(" "),
-    topic.official.linkingQuestions.join(" ")
-  ].join(" ").toLowerCase().includes(query);
-}
-
-function renderUnderstandingRow(understanding, topic) {
-  return outlineRow({
-    id: understandingId(understanding.code),
-    scope: understandingId(understanding.code),
-    depth: 3,
-    theme: topic.theme,
-    label: `${understanding.code} ${understanding.displayTitle ?? understanding.official.statement}`,
-    meta: understanding.teachingLevel,
-    hasChildren: false
-  });
-}
-
 function renderOutline() {
-  autoExpandSearchResults();
-
   els.outlineTree.innerHTML = `
-    ${outlineRow({
-      id: "all",
-      scope: "all",
-      depth: 0,
-      label: "All syllabus",
-      meta: `${understandings.length} understandings`,
-      hasChildren: false
-    })}
-    ${themes.map((theme) => {
-      const themeScope = `theme:${theme.code}`;
-      const themeOpen = state.expanded.has(themeScope);
-      const themeUnderstandingCount = understandings.filter((understanding) => {
-        const topic = getTopicForUnderstanding(understanding);
-        return topic?.theme === theme.code;
-      }).length;
-      const levelHtml = levels.map((level) => renderLevel(theme, level)).join("");
-
-      if (state.search.trim() && !levelHtml.trim()) return "";
-
-      return `
-        ${outlineRow({
-          id: themeScope,
-          scope: themeScope,
-          depth: 0,
-          theme: theme.code,
-          label: `${theme.code} ${theme.name}`,
-          meta: `${themeUnderstandingCount} U`
-        })}
-        ${themeOpen ? levelHtml : ""}
-      `;
-    }).join("")}
-  `;
-}
-
-function renderLevel(theme, level) {
-  const id = levelId(theme.code, level.code);
-  const open = state.expanded.has(id);
-  const levelTopics = getLevelTopics(theme.code, level.code);
-  const topicHtml = levelTopics.map(renderTopic).join("");
-  if (state.search.trim() && !topicHtml.trim()) return "";
-
-  return `
-    ${outlineRow({
-      id,
-      scope: id,
-      depth: 1,
-      theme: theme.code,
-      label: `${theme.code}${level.code} ${level.name}`,
-      meta: `${levelTopics.length} topics`
-    })}
-    ${open ? topicHtml : ""}
+    <div class="topic-matrix" aria-label="Topics by theme and organization level">
+      <span class="matrix-corner" aria-hidden="true"></span>
+      ${levels.map((level) => {
+        const scope = organizationLevelId(level.code);
+        const active = !state.search.trim() && isScopeChecked(scope);
+        return `<button class="matrix-axis-button matrix-level${active ? " active" : ""}"
+          data-toggle-scope="${escapeHtml(scope)}" type="button"
+          title="Select all organization level ${escapeHtml(level.code)} topics">${escapeHtml(level.code)}</button>`;
+      }).join("")}
+      ${themes.map((theme) => `
+        ${(() => {
+          const scope = themeId(theme.code);
+          const active = !state.search.trim() && isScopeChecked(scope);
+          return `<button class="matrix-axis-button matrix-theme theme-${escapeHtml(theme.code)}${active ? " active" : ""}"
+            data-toggle-scope="${escapeHtml(scope)}" type="button"
+            title="${escapeHtml(`Select all ${theme.code} ${theme.name} topics`)}">${escapeHtml(theme.code)}</button>`;
+        })()}
+        ${levels.map((level) => `
+          <div class="matrix-cell theme-${escapeHtml(theme.code)}">
+            ${(() => {
+              const scope = levelId(theme.code, level.code);
+              const active = !state.search.trim() && isScopeChecked(scope);
+              return `<button class="level-button${active ? " active" : ""}"
+                data-toggle-scope="${escapeHtml(scope)}" type="button"
+                title="Select all ${escapeHtml(theme.code + level.code)} topics">${escapeHtml(theme.code + level.code)}</button>`;
+            })()}
+            ${getLevelTopics(theme.code, level.code).map((topic) => {
+              const scope = topicId(topic.code);
+              const active = !state.search.trim() && isScopeChecked(scope);
+              return `<button class="topic-button${active ? " active" : ""}"
+                data-toggle-scope="${escapeHtml(scope)}" type="button"
+                title="${escapeHtml(`${topic.code} ${topic.title}`)}">${escapeHtml(topic.code)}</button>`;
+            }).join("")}
+          </div>
+        `).join("")}
+      `).join("")}
+    </div>
   `;
 }
 
@@ -581,6 +439,20 @@ function questionBlock(title, questions) {
   `;
 }
 
+function renderFigures(figures) {
+  if (!figures?.length) return "";
+  return `
+    <div class="syllabus-figures">
+      ${figures.map((figure) => `
+        <figure class="syllabus-figure${figure.layout === "wide" ? " wide" : ""}">
+          <img src="${escapeHtml(figure.src)}" alt="${escapeHtml(figure.alt || "")}" loading="lazy">
+          ${figure.caption ? `<figcaption>${escapeHtml(figure.caption)}</figcaption>` : ""}
+        </figure>
+      `).join("")}
+    </div>
+  `;
+}
+
 function renderUnderstandingCard(understanding) {
   return `
     <article class="understanding-card full" id="${escapeHtml(understanding.code)}">
@@ -590,6 +462,7 @@ function renderUnderstandingCard(understanding) {
       </header>
       <h3>${formatOfficialText(understanding.official.statement)}</h3>
       ${understanding.official.guidance ? `<p>${formatOfficialText(understanding.official.guidance)}</p>` : ""}
+      ${renderFigures(understanding.figures)}
       ${textBlock("Application of skills", understanding.official.applicationOfSkills)}
       ${textBlock("Nature of science", understanding.official.natureOfScience)}
       ${textBlock("Note", understanding.official.note)}
@@ -641,63 +514,6 @@ function renderReader() {
   }).join("");
 }
 
-function renderQuickScopes() {
-  renderLevelScopeButtons();
-}
-
-function makeFilterButton({ scope, text, title, className = "" }) {
-  const button = document.createElement("button");
-  button.className = `scope-button compact${className ? ` ${className}` : ""}${
-    state.search.trim() === "" && isScopeChecked(scope) ? " active" : ""
-  }`;
-  button.type = "button";
-  button.dataset.quickScope = scope;
-  if (title) button.title = title;
-  button.textContent = text;
-  return button;
-}
-
-function renderLevelScopeButtons() {
-  els.levelScopeButtons.innerHTML = "";
-
-  themes.forEach((theme) => {
-    if (theme.code === "C") {
-      const breakPoint = document.createElement("span");
-      breakPoint.className = "filter-break";
-      breakPoint.setAttribute("aria-hidden", "true");
-      els.levelScopeButtons.append(breakPoint);
-    }
-
-    const group = document.createElement("div");
-    group.className = `level-scope-group theme-${theme.code}`;
-
-    const themeScope = `theme:${theme.code}`;
-    group.append(
-      makeFilterButton({
-        scope: themeScope,
-        text: theme.code,
-        title: `${theme.code} ${theme.name}`,
-        className: "theme-scope-button"
-      })
-    );
-
-    levels.forEach((level) => {
-      const scope = levelId(theme.code, level.code);
-      group.append(makeFilterButton({ scope, text: level.code, title: `${theme.code}${level.code} ${level.name}` }));
-    });
-
-    els.levelScopeButtons.append(group);
-  });
-
-  els.levelScopeButtons.append(
-    makeFilterButton({ scope: "teaching:SL/HL", text: "SL", className: "global-scope-button" })
-  );
-  els.levelScopeButtons.append(
-    makeFilterButton({ scope: "teaching:AHL", text: "HL", className: "global-scope-button" })
-  );
-  els.levelScopeButtons.append(makeFilterButton({ scope: "all", text: "All", className: "global-scope-button" }));
-}
-
 function renderFontSize() {
   document.documentElement.style.setProperty("--reader-font-size", `${state.fontSize}px`);
   els.fontSizeValue.textContent = `${state.fontSize}px`;
@@ -717,46 +533,20 @@ function syncMobileOutlineState() {
   els.toggleOutline.textContent = collapsed ? "Show" : "Hide";
 }
 
-function closeMobileOutline() {
-  if (!mobileOutlineQuery.matches) return;
-  document.body.classList.remove("mobile-outline-open");
-  syncMobileOutlineState();
-}
-
 function renderAll() {
   renderOutline();
   renderReader();
-  renderQuickScopes();
+  els.teachingFilters.querySelectorAll("[data-toggle-scope]").forEach((button) => {
+    button.classList.toggle("active", !state.search.trim() && isScopeChecked(button.dataset.toggleScope));
+  });
   renderFontSize();
   syncMobileOutlineState();
 }
 
 document.body.addEventListener("click", (event) => {
-  const toggle = event.target.closest("[data-toggle]");
-  if (toggle && !toggle.disabled) {
-    const id = toggle.dataset.toggle;
-    state.expanded.has(id) ? state.expanded.delete(id) : state.expanded.add(id);
-    renderAll();
-    return;
-  }
-
-  const scope = event.target.closest("[data-scope]");
+  const scope = event.target.closest("[data-toggle-scope]");
   if (scope) {
-    toggleScope(scope.dataset.scope);
-    closeMobileOutline();
-    return;
-  }
-
-  const focus = event.target.closest("[data-focus-scope]");
-  if (focus) {
-    setSingleScope(focus.dataset.focusScope);
-    closeMobileOutline();
-    return;
-  }
-
-  const quickScope = event.target.closest("[data-quick-scope]");
-  if (quickScope) {
-    toggleQuickScope(quickScope.dataset.quickScope);
+    toggleScope(scope.dataset.toggleScope);
     return;
   }
 
@@ -783,20 +573,6 @@ els.fontSizeMinus.addEventListener("click", () => {
 
 els.fontSizePlus.addEventListener("click", () => {
   changeFontSize(1);
-});
-
-els.expandAll.addEventListener("click", () => {
-  themes.forEach((theme) => {
-    state.expanded.add(`theme:${theme.code}`);
-    levels.forEach((level) => state.expanded.add(levelId(theme.code, level.code)));
-  });
-  topics.forEach((topic) => state.expanded.add(topicId(topic.code)));
-  renderAll();
-});
-
-els.collapseAll.addEventListener("click", () => {
-  state.expanded.clear();
-  renderAll();
 });
 
 renderAll();

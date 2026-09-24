@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 279" role="img" aria-labelledby="title desc">
+  <title id="title">Sugar-phosphate bonding between nucleotides</title>
+  <desc id="desc">Two simplified nucleotides joined vertically through sugar-phosphate bonding.</desc>
+
+  <rect width="320" height="279" fill="#ffffff"/>
+
+  <g fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round">
+    <path d="M65 44 L102 64"/>
+    <path d="M188 64 L226 64"/>
+    <path d="M119 115 L67 170"/>
+    <path d="M65 194 L102 213"/>
+    <path d="M188 213 L226 213"/>
+  </g>
+
+  <g fill="#ffffff" stroke="#111827" stroke-width="2" stroke-linejoin="round">
+    <circle cx="54" cy="31" r="17"/>
+    <path d="M102 64 L145 33 L188 64 L171 115 L119 115 Z"/>
+    <rect x="226" y="44" width="78" height="40"/>
+
+    <circle cx="54" cy="180" r="17"/>
+    <path d="M102 213 L145 182 L188 213 L171 264 L119 264 Z"/>
+    <rect x="226" y="193" width="78" height="40"/>
+  </g>
+</svg>
